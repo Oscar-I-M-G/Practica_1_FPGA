@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, E:/Proyecto/Practica_1/Waveform.vwf
+source_file = 1, E:/Proyecto/Practica_1/luces.bdf
+source_file = 1, E:/Proyecto/Practica_1/db/Luces.cbx.xml
+design_name = luces
+instance = comp, \x1~I , x1, luces, 1
+instance = comp, \x2~I , x2, luces, 1
+instance = comp, \inst4~0 , inst4~0, luces, 1
+instance = comp, \f~I , f, luces, 1
