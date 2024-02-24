@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Proyecto\Practica_2\simulation\qsim
+vConversor
+Z1 IPn=R5`zj5a`Gz;R0LaoH82
+Z2 V6j@cP697PP]AD[1WbKBCO2
+Z3 dE:\Proyecto\Practica_2\simulation\qsim
+Z4 w1707339585
+Z5 8Conversor.vo
+Z6 FConversor.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@conversor
+!i10b 1
+Z10 !s100 zUSS0gJX?AC>BY0DgI5zI3
+!s85 0
+Z11 !s108 1707339588.517000
+Z12 !s107 Conversor.vo|
+Z13 !s90 -work|work|Conversor.vo|
+!s101 -O0
+vConversor_vlg_check_tst
+!i10b 1
+!s100 TGc`9b6@=W77idbYD6?j=1
+IdFYIK2kN7J8lMRW9A`E751
+Vm9L]NOH`Q9f2UHm7P^jz_0
+R3
+Z14 w1707339582
+Z15 8Conversor.vt
+Z16 FConversor.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z17 !s108 1707339588.861000
+Z18 !s107 Conversor.vt|
+Z19 !s90 -work|work|Conversor.vt|
+!s101 -O0
+R8
+n@conversor_vlg_check_tst
+vConversor_vlg_sample_tst
+!i10b 1
+!s100 =A[3j9n`9ZeORRiOhLYFV0
+I3TlmEl>6U;SZ4YghL:fQL1
+Vc[2z8>;8OTzVmmgMhdMz>2
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@conversor_vlg_sample_tst
+vConversor_vlg_vec_tst
+!i10b 1
+!s100 RaQ9d<]5Rd6UBZi5gblRD1
+IPfTBeLQf^aUBM8PdHLB;10
+VN7lL?[X[DE2OPTT>8KPOQ0
+R3
+R14
+R15
+R16
+L0 327
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@conversor_vlg_vec_tst
