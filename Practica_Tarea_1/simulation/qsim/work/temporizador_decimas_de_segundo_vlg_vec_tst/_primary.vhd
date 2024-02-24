@@ -1,4 +1,0 @@
-library verilog;
-use verilog.vl_types.all;
-entity temporizador_decimas_de_segundo_vlg_vec_tst is
-end temporizador_decimas_de_segundo_vlg_vec_tst;
