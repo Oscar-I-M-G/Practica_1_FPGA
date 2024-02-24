@@ -1,0 +1,15 @@
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+WED
+
+	Undo Commands
+	     1.	Move Time Bar
+			 ***  *** 
+	     2.	Clock
+	     3.	Insert Node or Bus
+
+

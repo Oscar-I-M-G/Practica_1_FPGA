@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Proyecto\Practica_3\simulation\qsim
+vtemporizador
+Z1 !s100 K27dlfhN>_Ocf<;igXoYg0
+Z2 I3__jHcVPV4lPRf__?Le0J1
+Z3 V6<XdPMdIJF1:ke1H2Kz732
+Z4 dE:\Proyecto\Practica_3\simulation\qsim
+Z5 w1707344557
+Z6 8temporizador.vo
+Z7 Ftemporizador.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|temporizador.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1707344560.598000
+Z12 !s107 temporizador.vo|
+!s101 -O0
+vtemporizador_vlg_check_tst
+!i10b 1
+Z13 !s100 S:H_5a=WBXUQg1Z@NcOTh0
+Z14 ILd2i;QbGkP]>_?GO5V[hg3
+Z15 V36[[WFKDc=<>EbeSI23NY3
+R4
+Z16 w1707344554
+Z17 8temporizador.vt
+Z18 Ftemporizador.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1707344560.895000
+Z20 !s107 temporizador.vt|
+Z21 !s90 -work|work|temporizador.vt|
+!s101 -O0
+R10
+vtemporizador_vlg_sample_tst
+!i10b 1
+Z22 !s100 a@<IiJ5<_F[IYCYAazO4d0
+Z23 IUdQlk4dY3V9F8]PD3CoQY0
+Z24 V[Le>B<Zd;iNNahCTK=C@]3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vtemporizador_vlg_vec_tst
+!i10b 1
+!s100 HGGV=^O]RhZk9B[m`_BEO3
+IdI=WGGW^PVJk>I5]2@INh1
+Z25 Vo4i=z?=Q>c@R@1IZBfAb`2
+R4
+R16
+R17
+R18
+Z26 L0 155
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
