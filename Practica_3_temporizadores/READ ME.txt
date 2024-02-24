@@ -1,0 +1,3 @@
+Temporizador de 50MHz
+Temporizador de 1 segundo
+Temporizador de 1 / 10 de segundo
