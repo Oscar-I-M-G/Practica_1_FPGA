@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Proyecto\Practica_Tarea_2\simulation\qsim
+vtemporizador_50MHz
+Z1 IzXNdO`@Ai>]1=<blGDVCZ2
+Z2 VSQJ7B9?2VJ=@z56P^N=8<2
+Z3 dF:\Proyecto\Practica_Tarea_2\simulation\qsim
+Z4 w1708779376
+Z5 8temporizador_50MHz.vo
+Z6 Ftemporizador_50MHz.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 ntemporizador_50@m@hz
+!i10b 1
+Z10 !s100 @_`=>a]3hI2g@ne60VcGe0
+!s85 0
+Z11 !s108 1708779385.676000
+Z12 !s107 temporizador_50MHz.vo|
+Z13 !s90 -work|work|temporizador_50MHz.vo|
+!s101 -O0
+vtemporizador_50MHz_vlg_check_tst
+!i10b 1
+!s100 GhP8YYL9JBI7JoNaWbfNR1
+Ig6ln<@_c:RA[2JG398if91
+V9a_?D3X7RlIQUCRF`K=mH0
+R3
+Z14 w1708779366
+Z15 8temporizador_50MHz.vt
+Z16 Ftemporizador_50MHz.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1708779390.895000
+Z18 !s107 temporizador_50MHz.vt|
+Z19 !s90 -work|work|temporizador_50MHz.vt|
+!s101 -O0
+R8
+ntemporizador_50@m@hz_vlg_check_tst
+vtemporizador_50MHz_vlg_sample_tst
+!i10b 1
+!s100 zBQ@Z]T]ALY5]J3RT;Xz^0
+IfHi[mjZSfA?^`Sd_2dlG<1
+V8_FHlo_gc43ci[J9P>7`O0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+ntemporizador_50@m@hz_vlg_sample_tst
+vtemporizador_50MHz_vlg_vec_tst
+!i10b 1
+!s100 fD[XKHion_Y=^2gh6:d^D3
+IL;WfdL@V56gk7UdZ]zK6Y2
+VN2coYdo^c3g]KY_608CQ41
+R3
+R14
+R15
+R16
+L0 154
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+ntemporizador_50@m@hz_vlg_vec_tst
