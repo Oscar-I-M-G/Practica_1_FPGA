@@ -1,0 +1,32 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# File: E:\Proyecto\Practica_2\Conversor.csv
+# Generated on: Wed Feb 07 21:57:13 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
+A,Output,PIN_AF10,8,B8_N0,PIN_C11,,,,
+B,Output,PIN_AB12,8,B8_N0,PIN_J11,,,,
+C,Output,PIN_AC12,8,B8_N0,PIN_F12,,,,
+D,Output,PIN_AD11,8,B8_N0,PIN_B14,,,,
+E,Output,PIN_AE11,8,B8_N0,PIN_J10,,,,
+F,Output,PIN_V14,8,B8_N0,PIN_G12,,,,
+G,Output,PIN_V13,8,B8_N0,PIN_B11,,,,
+IN0,Input,PIN_N25,5,B5_N1,PIN_B12,,,,
+IN1,Input,PIN_N26,5,B5_N1,PIN_C13,,,,
+IN2,Input,PIN_P25,6,B6_N0,PIN_C12,,,,
+IN4,Input,PIN_AE14,7,B7_N1,PIN_D13,,,,
