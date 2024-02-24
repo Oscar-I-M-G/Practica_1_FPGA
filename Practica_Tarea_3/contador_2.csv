@@ -1,0 +1,52 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# File: F:\Proyecto\Practica_Tarea_3\contador_2.csv
+# Generated on: Sat Feb 24 20:05:01 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
+ADM,Output,PIN_Y23,6,B6_N1,PIN_V3,,,,
+ADS,Output,PIN_V20,6,B6_N1,PIN_H15,,,,
+AUM,Output,PIN_AB23,6,B6_N1,PIN_J3,,,,
+AUS,Output,PIN_AF10,8,B8_N0,PIN_D20,,,,
+BDM,Output,PIN_AA25,6,B6_N1,PIN_AC3,,,,
+BDS,Output,PIN_V21,6,B6_N1,PIN_E15,,,,
+BUM,Output,PIN_V22,6,B6_N1,PIN_F1,,,,
+BUS,Output,PIN_AB12,8,B8_N0,PIN_J18,,,,
+CDM,Output,PIN_AA26,6,B6_N1,PIN_B11,,,,
+CDS,Output,PIN_W21,6,B6_N1,PIN_D15,,,,
+CLOCK,Input,PIN_D13,3,B3_N0,PIN_P2,,,,
+CUM,Output,PIN_AC25,6,B6_N1,PIN_G2,,,,
+CUS,Output,PIN_AC12,8,B8_N0,PIN_J16,,,,
+DDM,Output,PIN_Y26,6,B6_N1,PIN_N9,,,,
+DDS,Output,PIN_Y22,6,B6_N1,PIN_B17,,,,
+DUM,Output,PIN_AC26,6,B6_N1,PIN_H3,,,,
+DUS,Output,PIN_AD11,8,B8_N0,PIN_E20,,,,
+EDM,Output,PIN_Y25,6,B6_N1,PIN_T18,,,,
+EDS,Output,PIN_AA24,6,B6_N1,PIN_A17,,,,
+EUM,Output,PIN_AB26,6,B6_N1,PIN_K7,,,,
+EUS,Output,PIN_AE11,8,B8_N0,PIN_B20,,,,
+FDM,Output,PIN_U22,6,B6_N1,PIN_F11,,,,
+FDS,Output,PIN_AA23,6,B6_N1,PIN_D16,,,,
+FUM,Output,PIN_AB25,6,B6_N1,PIN_G1,,,,
+FUS,Output,PIN_V14,8,B8_N0,PIN_K17,,,,
+GDM,Output,PIN_W24,6,B6_N1,PIN_P18,,,,
+GDS,Output,PIN_AB24,6,B6_N1,PIN_H16,,,,
+GUM,Output,PIN_Y24,6,B6_N1,PIN_F2,,,,
+GUS,Output,PIN_V13,8,B8_N0,PIN_K16,,,,
+LED1S,Output,PIN_AE22,7,B7_N0,PIN_F25,,,,
+RST,Input,PIN_N25,5,B5_N1,PIN_N2,,,,
