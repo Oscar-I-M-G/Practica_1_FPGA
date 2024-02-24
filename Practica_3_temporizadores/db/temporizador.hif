@@ -1,0 +1,207 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74160
+# storage
+db|temporizador.(1).cnf
+db|temporizador.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74160.bdf
+dbb38ebd58de127a9388bea4bb226048
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74160:inst6
+74160:inst4
+74160:inst3
+74160:inst2
+}
+# macro_sequence
+
+# end
+# entity
+74161
+# storage
+db|temporizador.(2).cnf
+db|temporizador.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74161.tdf
+2ed0a3ddd766ade752e5112f973aaea
+7
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+RCO
+-1
+3
+ENT
+-1
+3
+CLK
+-1
+3
+}
+# hierarchies {
+74161:inst14
+74161:inst1
+}
+# macro_sequence
+
+# end
+# entity
+f74161
+# storage
+db|temporizador.(3).cnf
+db|temporizador.(3).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|f74161.bdf
+7336e83179d5c5b17228174483d7f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74161:inst14|f74161:sub
+74161:inst1|f74161:sub
+74161:inst|f74161:sub
+}
+# macro_sequence
+
+# end
+# entity
+74161
+# storage
+db|temporizador.(4).cnf
+db|temporizador.(4).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74161.tdf
+2ed0a3ddd766ade752e5112f973aaea
+7
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+RCO
+-1
+3
+CLRN
+-1
+3
+CLK
+-1
+3
+LDN
+-1
+2
+}
+# hierarchies {
+74161:inst
+}
+# macro_sequence
+
+# end
+# entity
+temporizador
+# storage
+db|temporizador.(0).cnf
+db|temporizador.(0).cnf
+# case_insensitive
+# source_file
+temporizador.bdf
+8ed6b04c721aba517bf787eed6324774
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+temporizador_50MHz
+# storage
+db|temporizador.(5).cnf
+db|temporizador.(5).cnf
+# case_insensitive
+# source_file
+temporizador_50mhz.bdf
+fdcf3bbff11a14b22d73c164a999eb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
