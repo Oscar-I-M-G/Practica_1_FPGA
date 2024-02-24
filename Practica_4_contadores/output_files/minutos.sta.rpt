@@ -1,0 +1,1389 @@
+TimeQuest Timing Analyzer report for minutos
+Fri Feb 09 19:06:55 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Slow Model Setup: 'CLOCK'
+ 11. Slow Model Setup: 'temporizador:inst1|74160:inst6|6'
+ 12. Slow Model Hold: 'CLOCK'
+ 13. Slow Model Hold: 'temporizador:inst1|74160:inst6|6'
+ 14. Slow Model Minimum Pulse Width: 'CLOCK'
+ 15. Slow Model Minimum Pulse Width: 'temporizador:inst1|74160:inst6|6'
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLOCK'
+ 24. Fast Model Setup: 'temporizador:inst1|74160:inst6|6'
+ 25. Fast Model Hold: 'CLOCK'
+ 26. Fast Model Hold: 'temporizador:inst1|74160:inst6|6'
+ 27. Fast Model Minimum Pulse Width: 'CLOCK'
+ 28. Fast Model Minimum Pulse Width: 'temporizador:inst1|74160:inst6|6'
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Setup Transfers
+ 35. Hold Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths
+ 39. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; minutos                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                             ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+; Clock Name                       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                              ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+; CLOCK                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK }                            ;
+; temporizador:inst1|74160:inst6|6 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { temporizador:inst1|74160:inst6|6 } ;
++----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                ;
++------------+-----------------+----------------------------------+------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                       ; Note                                                 ;
++------------+-----------------+----------------------------------+------------------------------------------------------+
+; 330.69 MHz ; 330.69 MHz      ; CLOCK                            ;                                                      ;
+; 661.38 MHz ; 454.96 MHz      ; temporizador:inst1|74160:inst6|6 ; limit due to low minimum pulse width violation (tcl) ;
++------------+-----------------+----------------------------------+------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow Model Setup Summary                                  ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -2.024 ; -34.031       ;
+; temporizador:inst1|74160:inst6|6 ; -0.512 ; -2.715        ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Hold Summary                                   ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -2.853 ; -11.074       ;
+; temporizador:inst1|74160:inst6|6 ; 0.292  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                    ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -1.380 ; -29.380       ;
+; temporizador:inst1|74160:inst6|6 ; -0.599 ; -9.584        ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK'                                                                                                                                       ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.024 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 3.054      ;
+; -2.000 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 3.032      ;
+; -1.996 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 3.026      ;
+; -1.988 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 3.018      ;
+; -1.988 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 3.018      ;
+; -1.985 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 3.015      ;
+; -1.970 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 3.002      ;
+; -1.964 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.996      ;
+; -1.964 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.996      ;
+; -1.961 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.993      ;
+; -1.960 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.990      ;
+; -1.960 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.990      ;
+; -1.957 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.987      ;
+; -1.934 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.966      ;
+; -1.934 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.966      ;
+; -1.931 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.963      ;
+; -1.882 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.912      ;
+; -1.850 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.882      ;
+; -1.846 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.876      ;
+; -1.846 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.876      ;
+; -1.843 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.873      ;
+; -1.814 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.846      ;
+; -1.814 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.846      ;
+; -1.811 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.843      ;
+; -1.752 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.782      ;
+; -1.725 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.757      ;
+; -1.716 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.746      ;
+; -1.716 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.746      ;
+; -1.713 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.743      ;
+; -1.689 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.721      ;
+; -1.689 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.721      ;
+; -1.686 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.718      ;
+; -1.644 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.676      ;
+; -1.611 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.647      ;
+; -1.610 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.451      ;
+; -1.608 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.640      ;
+; -1.608 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.640      ;
+; -1.605 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.637      ;
+; -1.587 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.002      ; 2.625      ;
+; -1.586 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.807      ; 3.429      ;
+; -1.583 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.619      ;
+; -1.582 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.423      ;
+; -1.578 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.608      ;
+; -1.557 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.002      ; 2.595      ;
+; -1.556 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.807      ; 3.399      ;
+; -1.554 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.586      ;
+; -1.550 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.580      ;
+; -1.524 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.556      ;
+; -1.469 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.505      ;
+; -1.468 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.309      ;
+; -1.452 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.484      ;
+; -1.437 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.002      ; 2.475      ;
+; -1.436 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.807      ; 3.279      ;
+; -1.436 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.466      ;
+; -1.435 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.469      ;
+; -1.435 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.469      ;
+; -1.434 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.468      ;
+; -1.425 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.459      ;
+; -1.425 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.459      ;
+; -1.425 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.459      ;
+; -1.416 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.448      ;
+; -1.416 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.448      ;
+; -1.413 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.445      ;
+; -1.407 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.441      ;
+; -1.407 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.441      ;
+; -1.406 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.440      ;
+; -1.404 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.436      ;
+; -1.401 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.437      ;
+; -1.401 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.437      ;
+; -1.401 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.437      ;
+; -1.397 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.431      ;
+; -1.397 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.431      ;
+; -1.397 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.431      ;
+; -1.371 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.407      ;
+; -1.371 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.407      ;
+; -1.371 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.407      ;
+; -1.339 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.375      ;
+; -1.338 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.179      ;
+; -1.312 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.002      ; 2.350      ;
+; -1.311 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.807      ; 3.154      ;
+; -1.306 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.336      ;
+; -1.293 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.327      ;
+; -1.293 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.327      ;
+; -1.292 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.326      ;
+; -1.283 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.317      ;
+; -1.283 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.317      ;
+; -1.283 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 2.317      ;
+; -1.279 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.004     ; 2.311      ;
+; -1.251 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.287      ;
+; -1.251 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.287      ;
+; -1.251 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.287      ;
+; -1.242 ; temporizador:inst1|74160:inst4|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.006     ; 2.272      ;
+; -1.231 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.002      ; 2.269      ;
+; -1.230 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.807      ; 3.073      ;
+; -1.215 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|6 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.251      ;
+; -1.214 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst3|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.250      ;
+; -1.214 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst3|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.250      ;
+; -1.213 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst3|6 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.249      ;
+; -1.211 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.052      ;
+; -1.210 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.805      ; 3.051      ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'temporizador:inst1|74160:inst6|6'                                                                                                  ;
++--------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; -0.512 ; 74160:inst2|6 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.449      ;
+; -0.511 ; 74160:inst2|6 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.448      ;
+; -0.510 ; 74160:inst2|6 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.447      ;
+; -0.396 ; 74160:inst2|9 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.333      ;
+; -0.395 ; 74160:inst2|9 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.332      ;
+; -0.394 ; 74160:inst2|9 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.331      ;
+; -0.352 ; 74160:inst|7  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.289      ;
+; -0.352 ; 74160:inst|7  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.289      ;
+; -0.340 ; 74160:inst2|6 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.277      ;
+; -0.339 ; 74160:inst2|6 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.276      ;
+; -0.339 ; 74160:inst2|6 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.276      ;
+; -0.308 ; 74160:inst|8  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.245      ;
+; -0.266 ; 74160:inst|6  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.203      ;
+; -0.265 ; 74160:inst|6  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.202      ;
+; -0.264 ; 74160:inst|6  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.201      ;
+; -0.164 ; 74160:inst2|8 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.101      ;
+; -0.126 ; 74160:inst|9  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.063      ;
+; -0.110 ; 74160:inst2|6 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 1.047      ;
+; -0.052 ; 74160:inst2|9 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.989      ;
+; -0.051 ; 74160:inst2|9 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.988      ;
+; 0.138  ; 74160:inst2|7 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.799      ;
+; 0.138  ; 74160:inst2|7 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.799      ;
+; 0.280  ; 74160:inst2|6 ; 74160:inst2|6 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst|8  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst|7  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst|9  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst|6  ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst2|7 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst2|8 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
+; 0.280  ; 74160:inst2|9 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.099     ; 0.657      ;
++--------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK'                                                                                                                                                                         ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                       ; Launch Clock                     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+; -2.853 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 3.472      ; 1.135      ;
+; -2.851 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 3.472      ; 1.137      ;
+; -2.850 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 3.472      ; 1.138      ;
+; -2.520 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 2.661      ; 0.657      ;
+; -2.353 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 3.472      ; 1.135      ;
+; -2.351 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 3.472      ; 1.137      ;
+; -2.350 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 3.472      ; 1.138      ;
+; -2.020 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 2.661      ; 0.657      ;
+; 0.308  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.385      ;
+; 0.309  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.386      ;
+; 0.391  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|9    ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|87   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|9   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst2|8              ; temporizador:inst1|74160:inst2|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst3|8              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst4|6              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst4|8              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst5|8              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.462  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.539      ;
+; 0.463  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.540      ;
+; 0.576  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.653      ;
+; 0.614  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.807      ; 1.687      ;
+; 0.615  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.807      ; 1.688      ;
+; 0.704  ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.970      ;
+; 0.725  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|87   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.991      ;
+; 0.725  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.991      ;
+; 0.726  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.992      ;
+; 0.730  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.811      ; 1.807      ;
+; 0.797  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.063      ;
+; 0.799  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.805  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.818  ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst2|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.084      ;
+; 0.818  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.084      ;
+; 0.819  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.085      ;
+; 0.834  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.100      ;
+; 0.836  ; temporizador:inst1|74160:inst2|8              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.102      ;
+; 0.836  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.102      ;
+; 0.837  ; temporizador:inst1|74160:inst3|8              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.103      ;
+; 0.844  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.110      ;
+; 0.846  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.112      ;
+; 0.850  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.116      ;
+; 0.850  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.116      ;
+; 0.850  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.116      ;
+; 0.857  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.123      ;
+; 0.882  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.807      ; 1.955      ;
+; 0.977  ; temporizador:inst1|74160:inst4|8              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.243      ;
+; 0.985  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.251      ;
+; 0.985  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.251      ;
+; 0.987  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.253      ;
+; 1.001  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|87  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.267      ;
+; 1.003  ; temporizador:inst1|74160:inst5|8              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.269      ;
+; 1.008  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst5|6              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.004     ; 1.270      ;
+; 1.019  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.285      ;
+; 1.024  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.290      ;
+; 1.034  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.300      ;
+; 1.056  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.127      ;
+; 1.057  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.128      ;
+; 1.074  ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.340      ;
+; 1.087  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.353      ;
+; 1.090  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.356      ;
+; 1.090  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.356      ;
+; 1.122  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.388      ;
+; 1.165  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.236      ;
+; 1.166  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.237      ;
+; 1.198  ; temporizador:inst1|74160:inst4|6              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.269      ;
+; 1.199  ; temporizador:inst1|74160:inst4|6              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.270      ;
+; 1.205  ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.471      ;
+; 1.217  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.229  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.495      ;
+; 1.230  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.496      ;
+; 1.259  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.526      ;
+; 1.271  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 1.535      ;
+; 1.271  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 1.535      ;
+; 1.271  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 1.535      ;
+; 1.276  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.542      ;
+; 1.324  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.805      ; 2.395      ;
+; 1.357  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 1.623      ;
+; 1.359  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst1|f74161:sub|9   ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 1.623      ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'temporizador:inst1|74160:inst6|6'                                                                                                  ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 0.292 ; 74160:inst2|6 ; 74160:inst2|6 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst2|7 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst2|8 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst2|9 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst|6  ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst|8  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst|9  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.292 ; 74160:inst|7  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.657      ;
+; 0.434 ; 74160:inst2|7 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.799      ;
+; 0.434 ; 74160:inst2|7 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.799      ;
+; 0.623 ; 74160:inst2|9 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.988      ;
+; 0.624 ; 74160:inst2|9 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 0.989      ;
+; 0.682 ; 74160:inst2|6 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.047      ;
+; 0.698 ; 74160:inst|9  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.063      ;
+; 0.736 ; 74160:inst2|8 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.101      ;
+; 0.836 ; 74160:inst|6  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.201      ;
+; 0.837 ; 74160:inst|6  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.202      ;
+; 0.838 ; 74160:inst|6  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.203      ;
+; 0.880 ; 74160:inst|8  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.245      ;
+; 0.911 ; 74160:inst2|6 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.276      ;
+; 0.911 ; 74160:inst2|6 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.276      ;
+; 0.912 ; 74160:inst2|6 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.277      ;
+; 0.924 ; 74160:inst|7  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.289      ;
+; 0.924 ; 74160:inst|7  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.289      ;
+; 0.966 ; 74160:inst2|9 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.331      ;
+; 0.967 ; 74160:inst2|9 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.332      ;
+; 0.968 ; 74160:inst2|9 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.333      ;
+; 1.082 ; 74160:inst2|6 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.447      ;
+; 1.083 ; 74160:inst2|6 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.448      ;
+; 1.084 ; 74160:inst2|6 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.099      ; 1.449      ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|110 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|110 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|87  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|87  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|9   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|9   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|99  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|99  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|110  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|110  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|87   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|87   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|9    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|9    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|99   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|99   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|110|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|110|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|87|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|87|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|99|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|99|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|9|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|9|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst5|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst5|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|8|clk                             ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'temporizador:inst1|74160:inst6|6'                                                                         ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                            ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|6                  ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|6                  ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|7                  ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|7                  ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|8                  ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|8                  ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|9                  ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|9                  ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|6                   ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|6                   ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|7                   ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|7                   ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|8                   ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|8                   ;
+; -0.599 ; 0.401        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|9                   ;
+; -0.599 ; 0.401        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|9                   ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|inclk[0] ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|inclk[0] ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|outclk   ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|outclk   ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|combout         ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|combout         ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|6|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|6|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|7|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|7|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|8|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|8|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|9|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|9|clk                    ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|6|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|6|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|7|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|7|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|8|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|8|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|9|clk                     ;
+; 0.401  ; 0.401        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|9|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst11~2|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst11~2|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst6|6|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst6|6|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst7~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst7~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst7~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst7~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|datad            ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                        ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 8.851 ; 8.851 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 4.871 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 8.583 ; 8.583 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 8.558 ; 8.558 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 8.506 ; 8.506 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 8.282 ; 8.282 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 8.356 ; 8.356 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 8.260 ; 8.260 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 8.227 ; 8.227 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 8.617 ; 8.617 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 8.498 ; 8.498 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 8.608 ; 8.608 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 8.594 ; 8.594 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 8.556 ; 8.556 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 8.282 ; 8.282 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 8.418 ; 8.418 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 4.871 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 8.619 ; 8.619 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 4.772 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 8.150 ; 8.150 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 7.970 ; 7.970 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 8.065 ; 8.065 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 7.698 ; 7.698 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 7.919 ; 7.919 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 7.684 ; 7.684 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 7.956 ; 7.956 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 8.244 ; 8.244 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 8.225 ; 8.225 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 8.235 ; 8.235 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 8.153 ; 8.153 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 7.969 ; 7.969 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 7.854 ; 7.854 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 7.832 ; 7.832 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 4.772 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Setup Summary                                  ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -0.359 ; -2.832        ;
+; temporizador:inst1|74160:inst6|6 ; 0.295  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Hold Summary                                   ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -1.641 ; -6.482        ;
+; temporizador:inst1|74160:inst6|6 ; 0.166  ; 0.000         ;
++----------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                    ;
++----------------------------------+--------+---------------+
+; Clock                            ; Slack  ; End Point TNS ;
++----------------------------------+--------+---------------+
+; CLOCK                            ; -1.380 ; -29.380       ;
+; temporizador:inst1|74160:inst6|6 ; -0.549 ; -8.784        ;
++----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK'                                                                                                                                       ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.359 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.388      ;
+; -0.357 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.387      ;
+; -0.346 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.376      ;
+; -0.345 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.374      ;
+; -0.341 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.370      ;
+; -0.341 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.370      ;
+; -0.339 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.369      ;
+; -0.339 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.369      ;
+; -0.338 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.367      ;
+; -0.336 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.366      ;
+; -0.328 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.358      ;
+; -0.328 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.358      ;
+; -0.327 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.356      ;
+; -0.327 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.356      ;
+; -0.325 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.355      ;
+; -0.324 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.353      ;
+; -0.299 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.328      ;
+; -0.299 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.329      ;
+; -0.281 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.310      ;
+; -0.281 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.310      ;
+; -0.281 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.311      ;
+; -0.281 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.311      ;
+; -0.278 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.307      ;
+; -0.278 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.308      ;
+; -0.272 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.553      ;
+; -0.270 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.552      ;
+; -0.259 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.541      ;
+; -0.258 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.539      ;
+; -0.226 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.255      ;
+; -0.225 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.255      ;
+; -0.212 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.493      ;
+; -0.212 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.494      ;
+; -0.208 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.237      ;
+; -0.208 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.237      ;
+; -0.207 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.237      ;
+; -0.207 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.237      ;
+; -0.205 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.234      ;
+; -0.204 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.234      ;
+; -0.195 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.225      ;
+; -0.177 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.207      ;
+; -0.177 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.207      ;
+; -0.175 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.207      ;
+; -0.174 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.204      ;
+; -0.173 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.001      ; 1.206      ;
+; -0.166 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.195      ;
+; -0.164 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.194      ;
+; -0.162 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.001      ; 1.195      ;
+; -0.161 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.193      ;
+; -0.153 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.183      ;
+; -0.152 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.181      ;
+; -0.139 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.420      ;
+; -0.138 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.420      ;
+; -0.115 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.147      ;
+; -0.115 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.001      ; 1.148      ;
+; -0.113 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.143      ;
+; -0.108 ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst6|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.390      ;
+; -0.106 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.135      ;
+; -0.106 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.136      ;
+; -0.105 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.386      ;
+; -0.105 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.386      ;
+; -0.104 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.135      ;
+; -0.103 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.385      ;
+; -0.103 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.385      ;
+; -0.095 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.125      ;
+; -0.095 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.125      ;
+; -0.092 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.123      ;
+; -0.092 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.123      ;
+; -0.092 ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.123      ;
+; -0.092 ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst5|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.122      ;
+; -0.092 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.374      ;
+; -0.092 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.374      ;
+; -0.091 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.122      ;
+; -0.091 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.122      ;
+; -0.091 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.372      ;
+; -0.091 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.372      ;
+; -0.090 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.121      ;
+; -0.090 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.122      ;
+; -0.090 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.122      ;
+; -0.090 ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.122      ;
+; -0.079 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.111      ;
+; -0.079 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.111      ;
+; -0.079 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.111      ;
+; -0.078 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.109      ;
+; -0.078 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.109      ;
+; -0.078 ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74160:inst4|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.109      ;
+; -0.045 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.076      ;
+; -0.045 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.076      ;
+; -0.045 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.326      ;
+; -0.045 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.249      ; 1.326      ;
+; -0.045 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|7 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.327      ;
+; -0.045 ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst6|8 ; CLOCK        ; CLOCK       ; 1.000        ; 0.250      ; 1.327      ;
+; -0.044 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst2|9 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.075      ;
+; -0.042 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.074      ;
+; -0.041 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst3|9 ; CLOCK        ; CLOCK       ; 1.000        ; 0.001      ; 1.074      ;
+; -0.033 ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.003     ; 1.062      ;
+; -0.032 ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst5|6 ; CLOCK        ; CLOCK       ; 1.000        ; -0.002     ; 1.062      ;
+; -0.032 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst4|7 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.063      ;
+; -0.032 ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74160:inst4|8 ; CLOCK        ; CLOCK       ; 1.000        ; -0.001     ; 1.063      ;
++--------+-----------------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'temporizador:inst1|74160:inst6|6'                                                                                                 ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 0.295 ; 74160:inst2|6 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.688      ;
+; 0.296 ; 74160:inst2|6 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.687      ;
+; 0.297 ; 74160:inst2|6 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.686      ;
+; 0.341 ; 74160:inst2|9 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.642      ;
+; 0.342 ; 74160:inst2|9 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.641      ;
+; 0.343 ; 74160:inst2|9 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.640      ;
+; 0.367 ; 74160:inst|7  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.616      ;
+; 0.372 ; 74160:inst2|6 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.611      ;
+; 0.373 ; 74160:inst2|6 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.610      ;
+; 0.373 ; 74160:inst2|6 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.610      ;
+; 0.375 ; 74160:inst|7  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.608      ;
+; 0.386 ; 74160:inst|8  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.597      ;
+; 0.415 ; 74160:inst|6  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.568      ;
+; 0.416 ; 74160:inst|6  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.567      ;
+; 0.417 ; 74160:inst|6  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.566      ;
+; 0.461 ; 74160:inst2|8 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.522      ;
+; 0.469 ; 74160:inst2|6 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.514      ;
+; 0.475 ; 74160:inst|9  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.508      ;
+; 0.501 ; 74160:inst2|9 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.482      ;
+; 0.502 ; 74160:inst2|9 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.481      ;
+; 0.586 ; 74160:inst2|7 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.397      ;
+; 0.586 ; 74160:inst2|7 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.397      ;
+; 0.616 ; 74160:inst2|6 ; 74160:inst2|6 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst|8  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst|7  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst|9  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst|6  ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst2|7 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst2|8 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
+; 0.616 ; 74160:inst2|9 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 1.000        ; -0.049     ; 0.367      ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK'                                                                                                                                                                         ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                       ; Launch Clock                     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+; -1.641 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 1.892      ; 0.544      ;
+; -1.638 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 1.892      ; 0.547      ;
+; -1.637 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 1.892      ; 0.548      ;
+; -1.566 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; 0.000        ; 1.640      ; 0.367      ;
+; -1.141 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 1.892      ; 0.544      ;
+; -1.138 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 1.892      ; 0.547      ;
+; -1.137 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 1.892      ; 0.548      ;
+; -1.066 ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6              ; temporizador:inst1|74160:inst6|6 ; CLOCK       ; -0.500       ; 1.640      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|9    ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|87   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst|f74161:sub|110  ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|9   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst2|6              ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst2|8              ; temporizador:inst1|74160:inst2|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst3|8              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst4|6              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst4|8              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst5|8              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.270  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.674      ;
+; 0.270  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.674      ;
+; 0.319  ; temporizador:inst1|74161:inst|f74161:sub|99   ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.471      ;
+; 0.330  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.482      ;
+; 0.332  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|87   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.736      ;
+; 0.332  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.736      ;
+; 0.358  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.361  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.364  ; temporizador:inst1|74160:inst3|7              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.516      ;
+; 0.370  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371  ; temporizador:inst1|74160:inst2|9              ; temporizador:inst1|74160:inst2|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.376  ; temporizador:inst1|74160:inst2|7              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.528      ;
+; 0.378  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379  ; temporizador:inst1|74160:inst2|8              ; temporizador:inst1|74160:inst2|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst4|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380  ; temporizador:inst1|74160:inst3|8              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.532      ;
+; 0.385  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.537      ;
+; 0.385  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.537      ;
+; 0.386  ; temporizador:inst1|74160:inst4|7              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.538      ;
+; 0.386  ; temporizador:inst1|74160:inst5|7              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.538      ;
+; 0.387  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.791      ;
+; 0.401  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.250      ; 0.803      ;
+; 0.401  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.250      ; 0.803      ;
+; 0.442  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|99   ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.594      ;
+; 0.443  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.595      ;
+; 0.443  ; temporizador:inst1|74160:inst4|8              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.595      ;
+; 0.445  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.597      ;
+; 0.449  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.252      ; 0.853      ;
+; 0.451  ; temporizador:inst1|74161:inst1|f74161:sub|9   ; temporizador:inst1|74161:inst1|f74161:sub|87  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.603      ;
+; 0.454  ; temporizador:inst1|74160:inst5|8              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.606      ;
+; 0.455  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.607      ;
+; 0.457  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.609      ;
+; 0.457  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst5|6              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 0.607      ;
+; 0.462  ; temporizador:inst1|74161:inst|f74161:sub|9    ; temporizador:inst1|74161:inst|f74161:sub|110  ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.614      ;
+; 0.495  ; temporizador:inst1|74160:inst6|8              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.647      ;
+; 0.507  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.510  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst5|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.662      ;
+; 0.518  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.250      ; 0.920      ;
+; 0.524  ; temporizador:inst1|74160:inst5|6              ; temporizador:inst1|74160:inst6|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.676      ;
+; 0.536  ; temporizador:inst1|74160:inst6|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.557  ; temporizador:inst1|74160:inst6|7              ; temporizador:inst1|74160:inst6|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.709      ;
+; 0.563  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563  ; temporizador:inst1|74161:inst1|f74161:sub|99  ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.577  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74161:inst1|f74161:sub|110 ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.729      ;
+; 0.577  ; temporizador:inst1|74161:inst1|f74161:sub|87  ; temporizador:inst1|74160:inst2|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.729      ;
+; 0.582  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.733      ;
+; 0.582  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.733      ;
+; 0.582  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.733      ;
+; 0.586  ; temporizador:inst1|74160:inst5|9              ; temporizador:inst1|74160:inst6|6              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.738      ;
+; 0.595  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst6|7              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.249      ; 0.996      ;
+; 0.595  ; temporizador:inst1|74160:inst3|9              ; temporizador:inst1|74160:inst6|8              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.249      ; 0.996      ;
+; 0.600  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst1|f74161:sub|87  ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.751      ;
+; 0.601  ; temporizador:inst1|74161:inst|f74161:sub|87   ; temporizador:inst1|74161:inst1|f74161:sub|9   ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.752      ;
+; 0.612  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst3|9              ; CLOCK                            ; CLOCK       ; 0.000        ; 0.000      ; 0.764      ;
+; 0.625  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst4|7              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.776      ;
+; 0.625  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst4|8              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.776      ;
+; 0.625  ; temporizador:inst1|74160:inst3|6              ; temporizador:inst1|74160:inst4|9              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.001     ; 0.776      ;
+; 0.629  ; temporizador:inst1|74160:inst4|9              ; temporizador:inst1|74160:inst5|9              ; CLOCK                            ; CLOCK       ; 0.000        ; -0.002     ; 0.779      ;
++--------+-----------------------------------------------+-----------------------------------------------+----------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'temporizador:inst1|74160:inst6|6'                                                                                                  ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock                     ; Latch Clock                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+; 0.166 ; 74160:inst2|6 ; 74160:inst2|6 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst2|7 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst2|8 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst2|9 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst|6  ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst|8  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst|9  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.166 ; 74160:inst|7  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.367      ;
+; 0.196 ; 74160:inst2|7 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.397      ;
+; 0.196 ; 74160:inst2|7 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.397      ;
+; 0.280 ; 74160:inst2|9 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.481      ;
+; 0.281 ; 74160:inst2|9 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.482      ;
+; 0.307 ; 74160:inst|9  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.508      ;
+; 0.313 ; 74160:inst2|6 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.514      ;
+; 0.321 ; 74160:inst2|8 ; 74160:inst2|9 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.522      ;
+; 0.365 ; 74160:inst|6  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.566      ;
+; 0.366 ; 74160:inst|6  ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.567      ;
+; 0.367 ; 74160:inst|6  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.568      ;
+; 0.396 ; 74160:inst|8  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.597      ;
+; 0.407 ; 74160:inst|7  ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.608      ;
+; 0.409 ; 74160:inst2|6 ; 74160:inst2|7 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.610      ;
+; 0.409 ; 74160:inst2|6 ; 74160:inst2|8 ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.610      ;
+; 0.410 ; 74160:inst2|6 ; 74160:inst|6  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.611      ;
+; 0.415 ; 74160:inst|7  ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.616      ;
+; 0.439 ; 74160:inst2|9 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.640      ;
+; 0.440 ; 74160:inst2|9 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.641      ;
+; 0.441 ; 74160:inst2|9 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.642      ;
+; 0.485 ; 74160:inst2|6 ; 74160:inst|9  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.686      ;
+; 0.486 ; 74160:inst2|6 ; 74160:inst|7  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.687      ;
+; 0.487 ; 74160:inst2|6 ; 74160:inst|8  ; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0.000        ; 0.049      ; 0.688      ;
++-------+---------------+---------------+----------------------------------+----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst2|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst3|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst4|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst5|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|6              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|6              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|7              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|7              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|8              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|8              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|9              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74160:inst6|9              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|110 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|110 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|87  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|87  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|9   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|9   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|99  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst1|f74161:sub|99  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|110  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|110  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|87   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|87   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|9    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|9    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|99   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; temporizador:inst1|74161:inst|f74161:sub|99   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|110|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|110|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|87|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|87|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|99|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|99|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst1|sub|9|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst1|sub|9|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst2|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst2|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst3|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst3|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|8|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst4|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst4|9|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst5|6|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst1|inst5|7|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst1|inst5|8|clk                             ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'temporizador:inst1|74160:inst6|6'                                                                         ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                            ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|6                  ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|6                  ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|7                  ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|7                  ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|8                  ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|8                  ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|9                  ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst2|9                  ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|6                   ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|6                   ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|7                   ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|7                   ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|8                   ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|8                   ;
+; -0.549 ; 0.451        ; 1.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|9                   ;
+; -0.549 ; 0.451        ; 1.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; 74160:inst|9                   ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|inclk[0] ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|inclk[0] ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|outclk   ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2clkctrl|outclk   ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|combout         ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|combout         ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|6|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|6|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|7|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|7|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|8|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|8|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|9|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst2|9|clk                    ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|6|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|6|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|7|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|7|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|8|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|8|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|9|clk                     ;
+; 0.451  ; 0.451        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst|9|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst11~2|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst11~2|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst11~2|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst6|6|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst6|6|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst7~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Fall       ; inst1|inst7~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst7~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst7~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; temporizador:inst1|74160:inst6|6 ; Rise       ; inst1|inst8~0|datad            ;
++--------+--------------+----------------+------------------+----------------------------------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                        ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 4.653 ; 4.653 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 2.487 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 4.472 ; 4.472 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 4.474 ; 4.474 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 4.450 ; 4.450 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 4.341 ; 4.341 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 4.387 ; 4.387 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 4.340 ; 4.340 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 4.330 ; 4.330 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 4.497 ; 4.497 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 4.434 ; 4.434 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 4.488 ; 4.488 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 4.508 ; 4.508 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 4.466 ; 4.466 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 4.351 ; 4.351 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 4.401 ; 4.401 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 2.487 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 4.521 ; 4.521 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 2.438 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 4.275 ; 4.275 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 4.213 ; 4.213 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 4.247 ; 4.247 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 4.083 ; 4.083 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 4.183 ; 4.183 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 4.076 ; 4.076 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 4.201 ; 4.201 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 4.324 ; 4.324 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 4.306 ; 4.306 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 4.313 ; 4.313 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 4.303 ; 4.303 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 4.196 ; 4.196 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 4.153 ; 4.153 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 4.131 ; 4.131 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 2.438 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                              ;
++-----------------------------------+---------+---------+----------+---------+---------------------+
+; Clock                             ; Setup   ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------+---------+---------+----------+---------+---------------------+
+; Worst-case Slack                  ; -2.024  ; -2.853  ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK                            ; -2.024  ; -2.853  ; N/A      ; N/A     ; -1.380              ;
+;  temporizador:inst1|74160:inst6|6 ; -0.512  ; 0.166   ; N/A      ; N/A     ; -0.599              ;
+; Design-wide TNS                   ; -36.746 ; -11.074 ; 0.0      ; 0.0     ; -38.964             ;
+;  CLOCK                            ; -34.031 ; -11.074 ; N/A      ; N/A     ; -29.380             ;
+;  temporizador:inst1|74160:inst6|6 ; -2.715  ; 0.000   ; N/A      ; N/A     ; -9.584              ;
++-----------------------------------+---------+---------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                        ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 8.851 ; 8.851 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 4.871 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 8.583 ; 8.583 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 8.558 ; 8.558 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 8.506 ; 8.506 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 8.282 ; 8.282 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 8.356 ; 8.356 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 8.260 ; 8.260 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 8.227 ; 8.227 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 8.617 ; 8.617 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 8.498 ; 8.498 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 8.608 ; 8.608 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 8.594 ; 8.594 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 8.556 ; 8.556 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 8.282 ; 8.282 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 8.418 ; 8.418 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 4.871 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; Data Port ; Clock Port                       ; Rise  ; Fall  ; Clock Edge ; Clock Reference                  ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+; LED1S     ; CLOCK                            ; 4.521 ; 4.521 ; Rise       ; CLOCK                            ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ;       ; 2.438 ; Rise       ; temporizador:inst1|74160:inst6|6 ;
+; ADS       ; temporizador:inst1|74160:inst6|6 ; 4.275 ; 4.275 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; AUS       ; temporizador:inst1|74160:inst6|6 ; 4.213 ; 4.213 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BDS       ; temporizador:inst1|74160:inst6|6 ; 4.247 ; 4.247 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; BUS       ; temporizador:inst1|74160:inst6|6 ; 4.083 ; 4.083 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CDS       ; temporizador:inst1|74160:inst6|6 ; 4.183 ; 4.183 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; CUS       ; temporizador:inst1|74160:inst6|6 ; 4.076 ; 4.076 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DDS       ; temporizador:inst1|74160:inst6|6 ; 4.201 ; 4.201 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; DUS       ; temporizador:inst1|74160:inst6|6 ; 4.324 ; 4.324 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EDS       ; temporizador:inst1|74160:inst6|6 ; 4.306 ; 4.306 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; EUS       ; temporizador:inst1|74160:inst6|6 ; 4.313 ; 4.313 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FDS       ; temporizador:inst1|74160:inst6|6 ; 4.303 ; 4.303 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; FUS       ; temporizador:inst1|74160:inst6|6 ; 4.196 ; 4.196 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GDS       ; temporizador:inst1|74160:inst6|6 ; 4.153 ; 4.153 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; GUS       ; temporizador:inst1|74160:inst6|6 ; 4.131 ; 4.131 ; Fall       ; temporizador:inst1|74160:inst6|6 ;
+; LED1S     ; temporizador:inst1|74160:inst6|6 ; 2.438 ;       ; Fall       ; temporizador:inst1|74160:inst6|6 ;
++-----------+----------------------------------+-------+-------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                 ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; CLOCK                            ; CLOCK                            ; 343      ; 0        ; 0        ; 0        ;
+; temporizador:inst1|74160:inst6|6 ; CLOCK                            ; 5        ; 5        ; 0        ; 0        ;
+; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0        ; 0        ; 0        ; 30       ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                  ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+; CLOCK                            ; CLOCK                            ; 343      ; 0        ; 0        ; 0        ;
+; temporizador:inst1|74160:inst6|6 ; CLOCK                            ; 5        ; 5        ; 0        ; 0        ;
+; temporizador:inst1|74160:inst6|6 ; temporizador:inst1|74160:inst6|6 ; 0        ; 0        ; 0        ; 30       ;
++----------------------------------+----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 15    ; 15   ;
+; Unconstrained Output Port Paths ; 57    ; 57   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Feb 09 19:06:48 2024
+Info: Command: quartus_sta minutos -c minutos
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'minutos.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name temporizador:inst1|74160:inst6|6 temporizador:inst1|74160:inst6|6
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.024
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.024       -34.031 CLOCK 
+    Info (332119):    -0.512        -2.715 temporizador:inst1|74160:inst6|6 
+Info (332146): Worst-case hold slack is -2.853
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.853       -11.074 CLOCK 
+    Info (332119):     0.292         0.000 temporizador:inst1|74160:inst6|6 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -29.380 CLOCK 
+    Info (332119):    -0.599        -9.584 temporizador:inst1|74160:inst6|6 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.359
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.359        -2.832 CLOCK 
+    Info (332119):     0.295         0.000 temporizador:inst1|74160:inst6|6 
+Info (332146): Worst-case hold slack is -1.641
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.641        -6.482 CLOCK 
+    Info (332119):     0.166         0.000 temporizador:inst1|74160:inst6|6 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -29.380 CLOCK 
+    Info (332119):    -0.549        -8.784 temporizador:inst1|74160:inst6|6 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Fri Feb 09 19:06:55 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+
+
