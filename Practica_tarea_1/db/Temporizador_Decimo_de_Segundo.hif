@@ -1,0 +1,208 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Temporizador_Decimo_de_Segundo
+# storage
+db|Temporizador_Decimo_de_Segundo.(0).cnf
+db|Temporizador_Decimo_de_Segundo.(0).cnf
+# case_insensitive
+# source_file
+temporizador_decimo_de_segundo.bdf
+66c39a1fae0bdad9ff9029868f40c3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+74160
+# storage
+db|Temporizador_Decimo_de_Segundo.(2).cnf
+db|Temporizador_Decimo_de_Segundo.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74160.bdf
+dbb38ebd58de127a9388bea4bb226048
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+temporizador:inst|74160:inst6
+temporizador:inst|74160:inst4
+temporizador:inst|74160:inst3
+temporizador:inst|74160:inst2
+}
+# macro_sequence
+
+# end
+# entity
+74161
+# storage
+db|Temporizador_Decimo_de_Segundo.(3).cnf
+db|Temporizador_Decimo_de_Segundo.(3).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74161.tdf
+2ed0a3ddd766ade752e5112f973aaea
+7
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+RCO
+-1
+3
+ENT
+-1
+3
+CLK
+-1
+3
+}
+# hierarchies {
+temporizador:inst|74161:inst1
+}
+# macro_sequence
+
+# end
+# entity
+f74161
+# storage
+db|Temporizador_Decimo_de_Segundo.(4).cnf
+db|Temporizador_Decimo_de_Segundo.(4).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|f74161.bdf
+7336e83179d5c5b17228174483d7f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+temporizador:inst|74161:inst1|f74161:sub
+temporizador:inst|74161:inst|f74161:sub
+}
+# macro_sequence
+
+# end
+# entity
+74161
+# storage
+db|Temporizador_Decimo_de_Segundo.(5).cnf
+db|Temporizador_Decimo_de_Segundo.(5).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74161.tdf
+2ed0a3ddd766ade752e5112f973aaea
+7
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+RCO
+-1
+3
+CLRN
+-1
+3
+CLK
+-1
+3
+LDN
+-1
+2
+}
+# hierarchies {
+temporizador:inst|74161:inst
+}
+# macro_sequence
+
+# end
+# entity
+temporizador
+# storage
+db|Temporizador_Decimo_de_Segundo.(1).cnf
+db|Temporizador_Decimo_de_Segundo.(1).cnf
+# case_insensitive
+# source_file
+|proyecto|practica_3|temporizador.bdf
+652172ca2658d527432af1fa1bc86d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+temporizador:inst
+}
+# macro_sequence
+
+# end
+# complete
+
