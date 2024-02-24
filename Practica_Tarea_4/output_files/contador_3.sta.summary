@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK'
+Slack : -3.204
+TNS   : -47.033
+
+Type  : Slow Model Setup 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : -0.740
+TNS   : -3.243
+
+Type  : Slow Model Setup 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : -0.199
+TNS   : -0.545
+
+Type  : Slow Model Setup 'contador_2:inst|74160:inst1|6'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Slow Model Hold 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : -4.973
+TNS   : -37.392
+
+Type  : Slow Model Hold 'CLOCK'
+Slack : -2.524
+TNS   : -12.991
+
+Type  : Slow Model Hold 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Slow Model Hold 'contador_2:inst|74160:inst1|6'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK'
+Slack : -1.380
+TNS   : -29.380
+
+Type  : Slow Model Minimum Pulse Width 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : -0.637
+TNS   : -5.096
+
+Type  : Slow Model Minimum Pulse Width 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : -0.628
+TNS   : -15.072
+
+Type  : Slow Model Minimum Pulse Width 'contador_2:inst|74160:inst1|6'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Setup 'CLOCK'
+Slack : -1.117
+TNS   : -9.418
+
+Type  : Fast Model Setup 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : 0.054
+TNS   : 0.000
+
+Type  : Fast Model Setup 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Fast Model Setup 'contador_2:inst|74160:inst1|6'
+Slack : 0.629
+TNS   : 0.000
+
+Type  : Fast Model Hold 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : -2.624
+TNS   : -19.964
+
+Type  : Fast Model Hold 'CLOCK'
+Slack : -1.569
+TNS   : -8.029
+
+Type  : Fast Model Hold 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast Model Hold 'contador_2:inst|74160:inst1|6'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK'
+Slack : -1.380
+TNS   : -29.380
+
+Type  : Fast Model Minimum Pulse Width 'contador_2:inst|temporizador:inst|74160:inst5|6'
+Slack : -0.557
+TNS   : -4.456
+
+Type  : Fast Model Minimum Pulse Width 'contador_2:inst|temporizador:inst|74160:inst6|6'
+Slack : -0.548
+TNS   : -13.152
+
+Type  : Fast Model Minimum Pulse Width 'contador_2:inst|74160:inst1|6'
+Slack : -0.500
+TNS   : -3.000
+
+------------------------------------------------------------

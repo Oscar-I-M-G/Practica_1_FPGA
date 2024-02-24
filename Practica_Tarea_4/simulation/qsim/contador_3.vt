@@ -1,0 +1,1251 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/24/2024 21:17:19"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    contador_3
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module contador_3_vlg_sample_tst(
+	CLOCK,
+	RST,
+	sampler_tx
+);
+input  CLOCK;
+input  RST;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLOCK or RST)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module contador_3_vlg_check_tst (
+	ADES,
+	ADM,
+	ADS,
+	AUM,
+	AUS,
+	BDES,
+	BDM,
+	BDS,
+	BUM,
+	BUS,
+	CDES,
+	CDM,
+	CDS,
+	CUM,
+	CUS,
+	DDES,
+	DDM,
+	DDS,
+	DUM,
+	DUS,
+	EDES,
+	EDM,
+	EDS,
+	EUM,
+	EUS,
+	FDES,
+	FDM,
+	FDS,
+	FUM,
+	FUS,
+	GDES,
+	GDM,
+	GDS,
+	GUM,
+	GUS,
+	OUT,
+	sampler_rx
+);
+input  ADES;
+input  ADM;
+input  ADS;
+input  AUM;
+input  AUS;
+input  BDES;
+input  BDM;
+input  BDS;
+input  BUM;
+input  BUS;
+input  CDES;
+input  CDM;
+input  CDS;
+input  CUM;
+input  CUS;
+input  DDES;
+input  DDM;
+input  DDS;
+input  DUM;
+input  DUS;
+input  EDES;
+input  EDM;
+input  EDS;
+input  EUM;
+input  EUS;
+input  FDES;
+input  FDM;
+input  FDS;
+input  FUM;
+input  FUS;
+input  GDES;
+input  GDM;
+input  GDS;
+input  GUM;
+input  GUS;
+input  OUT;
+input sampler_rx;
+
+reg  ADES_expected;
+reg  ADM_expected;
+reg  ADS_expected;
+reg  AUM_expected;
+reg  AUS_expected;
+reg  BDES_expected;
+reg  BDM_expected;
+reg  BDS_expected;
+reg  BUM_expected;
+reg  BUS_expected;
+reg  CDES_expected;
+reg  CDM_expected;
+reg  CDS_expected;
+reg  CUM_expected;
+reg  CUS_expected;
+reg  DDES_expected;
+reg  DDM_expected;
+reg  DDS_expected;
+reg  DUM_expected;
+reg  DUS_expected;
+reg  EDES_expected;
+reg  EDM_expected;
+reg  EDS_expected;
+reg  EUM_expected;
+reg  EUS_expected;
+reg  FDES_expected;
+reg  FDM_expected;
+reg  FDS_expected;
+reg  FUM_expected;
+reg  FUS_expected;
+reg  GDES_expected;
+reg  GDM_expected;
+reg  GDS_expected;
+reg  GUM_expected;
+reg  GUS_expected;
+reg  OUT_expected;
+
+reg  ADES_prev;
+reg  ADM_prev;
+reg  ADS_prev;
+reg  AUM_prev;
+reg  AUS_prev;
+reg  BDES_prev;
+reg  BDM_prev;
+reg  BDS_prev;
+reg  BUM_prev;
+reg  BUS_prev;
+reg  CDES_prev;
+reg  CDM_prev;
+reg  CDS_prev;
+reg  CUM_prev;
+reg  CUS_prev;
+reg  DDES_prev;
+reg  DDM_prev;
+reg  DDS_prev;
+reg  DUM_prev;
+reg  DUS_prev;
+reg  EDES_prev;
+reg  EDM_prev;
+reg  EDS_prev;
+reg  EUM_prev;
+reg  EUS_prev;
+reg  FDES_prev;
+reg  FDM_prev;
+reg  FDS_prev;
+reg  FUM_prev;
+reg  FUS_prev;
+reg  GDES_prev;
+reg  GDM_prev;
+reg  GDS_prev;
+reg  GUM_prev;
+reg  GUS_prev;
+reg  OUT_prev;
+
+reg  ADES_expected_prev;
+reg  ADM_expected_prev;
+reg  ADS_expected_prev;
+reg  AUM_expected_prev;
+reg  AUS_expected_prev;
+reg  BDES_expected_prev;
+reg  BDM_expected_prev;
+reg  BDS_expected_prev;
+reg  BUM_expected_prev;
+reg  BUS_expected_prev;
+reg  CDES_expected_prev;
+reg  CDM_expected_prev;
+reg  CDS_expected_prev;
+reg  CUM_expected_prev;
+reg  CUS_expected_prev;
+reg  DDES_expected_prev;
+reg  DDM_expected_prev;
+reg  DDS_expected_prev;
+reg  DUM_expected_prev;
+reg  DUS_expected_prev;
+reg  EDES_expected_prev;
+reg  EDM_expected_prev;
+reg  EDS_expected_prev;
+reg  EUM_expected_prev;
+reg  EUS_expected_prev;
+reg  FDES_expected_prev;
+reg  FDM_expected_prev;
+reg  FDS_expected_prev;
+reg  FUM_expected_prev;
+reg  FUS_expected_prev;
+reg  GDES_expected_prev;
+reg  GDM_expected_prev;
+reg  GDS_expected_prev;
+reg  GUM_expected_prev;
+reg  GUS_expected_prev;
+reg  OUT_expected_prev;
+
+reg  last_ADES_exp;
+reg  last_ADM_exp;
+reg  last_ADS_exp;
+reg  last_AUM_exp;
+reg  last_AUS_exp;
+reg  last_BDES_exp;
+reg  last_BDM_exp;
+reg  last_BDS_exp;
+reg  last_BUM_exp;
+reg  last_BUS_exp;
+reg  last_CDES_exp;
+reg  last_CDM_exp;
+reg  last_CDS_exp;
+reg  last_CUM_exp;
+reg  last_CUS_exp;
+reg  last_DDES_exp;
+reg  last_DDM_exp;
+reg  last_DDS_exp;
+reg  last_DUM_exp;
+reg  last_DUS_exp;
+reg  last_EDES_exp;
+reg  last_EDM_exp;
+reg  last_EDS_exp;
+reg  last_EUM_exp;
+reg  last_EUS_exp;
+reg  last_FDES_exp;
+reg  last_FDM_exp;
+reg  last_FDS_exp;
+reg  last_FUM_exp;
+reg  last_FUS_exp;
+reg  last_GDES_exp;
+reg  last_GDM_exp;
+reg  last_GDS_exp;
+reg  last_GUM_exp;
+reg  last_GUS_exp;
+reg  last_OUT_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:36] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 36'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	ADES_prev = ADES;
+	ADM_prev = ADM;
+	ADS_prev = ADS;
+	AUM_prev = AUM;
+	AUS_prev = AUS;
+	BDES_prev = BDES;
+	BDM_prev = BDM;
+	BDS_prev = BDS;
+	BUM_prev = BUM;
+	BUS_prev = BUS;
+	CDES_prev = CDES;
+	CDM_prev = CDM;
+	CDS_prev = CDS;
+	CUM_prev = CUM;
+	CUS_prev = CUS;
+	DDES_prev = DDES;
+	DDM_prev = DDM;
+	DDS_prev = DDS;
+	DUM_prev = DUM;
+	DUS_prev = DUS;
+	EDES_prev = EDES;
+	EDM_prev = EDM;
+	EDS_prev = EDS;
+	EUM_prev = EUM;
+	EUS_prev = EUS;
+	FDES_prev = FDES;
+	FDM_prev = FDM;
+	FDS_prev = FDS;
+	FUM_prev = FUM;
+	FUS_prev = FUS;
+	GDES_prev = GDES;
+	GDM_prev = GDM;
+	GDS_prev = GDS;
+	GUM_prev = GUM;
+	GUS_prev = GUS;
+	OUT_prev = OUT;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	ADES_expected_prev = ADES_expected;
+	ADM_expected_prev = ADM_expected;
+	ADS_expected_prev = ADS_expected;
+	AUM_expected_prev = AUM_expected;
+	AUS_expected_prev = AUS_expected;
+	BDES_expected_prev = BDES_expected;
+	BDM_expected_prev = BDM_expected;
+	BDS_expected_prev = BDS_expected;
+	BUM_expected_prev = BUM_expected;
+	BUS_expected_prev = BUS_expected;
+	CDES_expected_prev = CDES_expected;
+	CDM_expected_prev = CDM_expected;
+	CDS_expected_prev = CDS_expected;
+	CUM_expected_prev = CUM_expected;
+	CUS_expected_prev = CUS_expected;
+	DDES_expected_prev = DDES_expected;
+	DDM_expected_prev = DDM_expected;
+	DDS_expected_prev = DDS_expected;
+	DUM_expected_prev = DUM_expected;
+	DUS_expected_prev = DUS_expected;
+	EDES_expected_prev = EDES_expected;
+	EDM_expected_prev = EDM_expected;
+	EDS_expected_prev = EDS_expected;
+	EUM_expected_prev = EUM_expected;
+	EUS_expected_prev = EUS_expected;
+	FDES_expected_prev = FDES_expected;
+	FDM_expected_prev = FDM_expected;
+	FDS_expected_prev = FDS_expected;
+	FUM_expected_prev = FUM_expected;
+	FUS_expected_prev = FUS_expected;
+	GDES_expected_prev = GDES_expected;
+	GDM_expected_prev = GDM_expected;
+	GDS_expected_prev = GDS_expected;
+	GUM_expected_prev = GUM_expected;
+	GUS_expected_prev = GUS_expected;
+	OUT_expected_prev = OUT_expected;
+end
+
+
+
+// expected ADES
+initial
+begin
+	ADES_expected = 1'bX;
+end 
+
+// expected ADM
+initial
+begin
+	ADM_expected = 1'bX;
+end 
+
+// expected ADS
+initial
+begin
+	ADS_expected = 1'bX;
+end 
+
+// expected AUM
+initial
+begin
+	AUM_expected = 1'bX;
+end 
+
+// expected AUS
+initial
+begin
+	AUS_expected = 1'bX;
+end 
+
+// expected BDES
+initial
+begin
+	BDES_expected = 1'bX;
+end 
+
+// expected BDM
+initial
+begin
+	BDM_expected = 1'bX;
+end 
+
+// expected BDS
+initial
+begin
+	BDS_expected = 1'bX;
+end 
+
+// expected BUM
+initial
+begin
+	BUM_expected = 1'bX;
+end 
+
+// expected BUS
+initial
+begin
+	BUS_expected = 1'bX;
+end 
+
+// expected CDES
+initial
+begin
+	CDES_expected = 1'bX;
+end 
+
+// expected CDM
+initial
+begin
+	CDM_expected = 1'bX;
+end 
+
+// expected CDS
+initial
+begin
+	CDS_expected = 1'bX;
+end 
+
+// expected CUM
+initial
+begin
+	CUM_expected = 1'bX;
+end 
+
+// expected CUS
+initial
+begin
+	CUS_expected = 1'bX;
+end 
+
+// expected DDES
+initial
+begin
+	DDES_expected = 1'bX;
+end 
+
+// expected DDM
+initial
+begin
+	DDM_expected = 1'bX;
+end 
+
+// expected DDS
+initial
+begin
+	DDS_expected = 1'bX;
+end 
+
+// expected DUM
+initial
+begin
+	DUM_expected = 1'bX;
+end 
+
+// expected DUS
+initial
+begin
+	DUS_expected = 1'bX;
+end 
+
+// expected EDES
+initial
+begin
+	EDES_expected = 1'bX;
+end 
+
+// expected EDM
+initial
+begin
+	EDM_expected = 1'bX;
+end 
+
+// expected EDS
+initial
+begin
+	EDS_expected = 1'bX;
+end 
+
+// expected EUM
+initial
+begin
+	EUM_expected = 1'bX;
+end 
+
+// expected EUS
+initial
+begin
+	EUS_expected = 1'bX;
+end 
+
+// expected FDES
+initial
+begin
+	FDES_expected = 1'bX;
+end 
+
+// expected FDM
+initial
+begin
+	FDM_expected = 1'bX;
+end 
+
+// expected FDS
+initial
+begin
+	FDS_expected = 1'bX;
+end 
+
+// expected FUM
+initial
+begin
+	FUM_expected = 1'bX;
+end 
+
+// expected FUS
+initial
+begin
+	FUS_expected = 1'bX;
+end 
+
+// expected GDES
+initial
+begin
+	GDES_expected = 1'bX;
+end 
+
+// expected GDM
+initial
+begin
+	GDM_expected = 1'bX;
+end 
+
+// expected GDS
+initial
+begin
+	GDS_expected = 1'bX;
+end 
+
+// expected GUM
+initial
+begin
+	GUM_expected = 1'bX;
+end 
+
+// expected GUS
+initial
+begin
+	GUS_expected = 1'bX;
+end 
+
+// expected OUT
+initial
+begin
+	OUT_expected = 1'bX;
+end 
+// generate trigger
+always @(ADES_expected or ADES or ADM_expected or ADM or ADS_expected or ADS or AUM_expected or AUM or AUS_expected or AUS or BDES_expected or BDES or BDM_expected or BDM or BDS_expected or BDS or BUM_expected or BUM or BUS_expected or BUS or CDES_expected or CDES or CDM_expected or CDM or CDS_expected or CDS or CUM_expected or CUM or CUS_expected or CUS or DDES_expected or DDES or DDM_expected or DDM or DDS_expected or DDS or DUM_expected or DUM or DUS_expected or DUS or EDES_expected or EDES or EDM_expected or EDM or EDS_expected or EDS or EUM_expected or EUM or EUS_expected or EUS or FDES_expected or FDES or FDM_expected or FDM or FDS_expected or FDS or FUM_expected or FUM or FUS_expected or FUS or GDES_expected or GDES or GDM_expected or GDM or GDS_expected or GDS or GUM_expected or GUM or GUS_expected or GUS or OUT_expected or OUT)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected ADES = %b | expected ADM = %b | expected ADS = %b | expected AUM = %b | expected AUS = %b | expected BDES = %b | expected BDM = %b | expected BDS = %b | expected BUM = %b | expected BUS = %b | expected CDES = %b | expected CDM = %b | expected CDS = %b | expected CUM = %b | expected CUS = %b | expected DDES = %b | expected DDM = %b | expected DDS = %b | expected DUM = %b | expected DUS = %b | expected EDES = %b | expected EDM = %b | expected EDS = %b | expected EUM = %b | expected EUS = %b | expected FDES = %b | expected FDM = %b | expected FDS = %b | expected FUM = %b | expected FUS = %b | expected GDES = %b | expected GDM = %b | expected GDS = %b | expected GUM = %b | expected GUS = %b | expected OUT = %b | ",ADES_expected_prev,ADM_expected_prev,ADS_expected_prev,AUM_expected_prev,AUS_expected_prev,BDES_expected_prev,BDM_expected_prev,BDS_expected_prev,BUM_expected_prev,BUS_expected_prev,CDES_expected_prev,CDM_expected_prev,CDS_expected_prev,CUM_expected_prev,CUS_expected_prev,DDES_expected_prev,DDM_expected_prev,DDS_expected_prev,DUM_expected_prev,DUS_expected_prev,EDES_expected_prev,EDM_expected_prev,EDS_expected_prev,EUM_expected_prev,EUS_expected_prev,FDES_expected_prev,FDM_expected_prev,FDS_expected_prev,FUM_expected_prev,FUS_expected_prev,GDES_expected_prev,GDM_expected_prev,GDS_expected_prev,GUM_expected_prev,GUS_expected_prev,OUT_expected_prev);
+	$display("| real ADES = %b | real ADM = %b | real ADS = %b | real AUM = %b | real AUS = %b | real BDES = %b | real BDM = %b | real BDS = %b | real BUM = %b | real BUS = %b | real CDES = %b | real CDM = %b | real CDS = %b | real CUM = %b | real CUS = %b | real DDES = %b | real DDM = %b | real DDS = %b | real DUM = %b | real DUS = %b | real EDES = %b | real EDM = %b | real EDS = %b | real EUM = %b | real EUS = %b | real FDES = %b | real FDM = %b | real FDS = %b | real FUM = %b | real FUS = %b | real GDES = %b | real GDM = %b | real GDS = %b | real GUM = %b | real GUS = %b | real OUT = %b | ",ADES_prev,ADM_prev,ADS_prev,AUM_prev,AUS_prev,BDES_prev,BDM_prev,BDS_prev,BUM_prev,BUS_prev,CDES_prev,CDM_prev,CDS_prev,CUM_prev,CUS_prev,DDES_prev,DDM_prev,DDS_prev,DUM_prev,DUS_prev,EDES_prev,EDM_prev,EDS_prev,EUM_prev,EUS_prev,FDES_prev,FDM_prev,FDS_prev,FUM_prev,FUS_prev,GDES_prev,GDM_prev,GDS_prev,GUM_prev,GUS_prev,OUT_prev);
+`endif
+	if (
+		( ADES_expected_prev !== 1'bx ) && ( ADES_prev !== ADES_expected_prev )
+		&& ((ADES_expected_prev !== last_ADES_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ADES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ADES_expected_prev);
+		$display ("     Real value = %b", ADES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ADES_exp = ADES_expected_prev;
+	end
+	if (
+		( ADM_expected_prev !== 1'bx ) && ( ADM_prev !== ADM_expected_prev )
+		&& ((ADM_expected_prev !== last_ADM_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ADM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ADM_expected_prev);
+		$display ("     Real value = %b", ADM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ADM_exp = ADM_expected_prev;
+	end
+	if (
+		( ADS_expected_prev !== 1'bx ) && ( ADS_prev !== ADS_expected_prev )
+		&& ((ADS_expected_prev !== last_ADS_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ADS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ADS_expected_prev);
+		$display ("     Real value = %b", ADS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_ADS_exp = ADS_expected_prev;
+	end
+	if (
+		( AUM_expected_prev !== 1'bx ) && ( AUM_prev !== AUM_expected_prev )
+		&& ((AUM_expected_prev !== last_AUM_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AUM_expected_prev);
+		$display ("     Real value = %b", AUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_AUM_exp = AUM_expected_prev;
+	end
+	if (
+		( AUS_expected_prev !== 1'bx ) && ( AUS_prev !== AUS_expected_prev )
+		&& ((AUS_expected_prev !== last_AUS_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AUS_expected_prev);
+		$display ("     Real value = %b", AUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_AUS_exp = AUS_expected_prev;
+	end
+	if (
+		( BDES_expected_prev !== 1'bx ) && ( BDES_prev !== BDES_expected_prev )
+		&& ((BDES_expected_prev !== last_BDES_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BDES_expected_prev);
+		$display ("     Real value = %b", BDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_BDES_exp = BDES_expected_prev;
+	end
+	if (
+		( BDM_expected_prev !== 1'bx ) && ( BDM_prev !== BDM_expected_prev )
+		&& ((BDM_expected_prev !== last_BDM_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BDM_expected_prev);
+		$display ("     Real value = %b", BDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_BDM_exp = BDM_expected_prev;
+	end
+	if (
+		( BDS_expected_prev !== 1'bx ) && ( BDS_prev !== BDS_expected_prev )
+		&& ((BDS_expected_prev !== last_BDS_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BDS_expected_prev);
+		$display ("     Real value = %b", BDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_BDS_exp = BDS_expected_prev;
+	end
+	if (
+		( BUM_expected_prev !== 1'bx ) && ( BUM_prev !== BUM_expected_prev )
+		&& ((BUM_expected_prev !== last_BUM_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BUM_expected_prev);
+		$display ("     Real value = %b", BUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_BUM_exp = BUM_expected_prev;
+	end
+	if (
+		( BUS_expected_prev !== 1'bx ) && ( BUS_prev !== BUS_expected_prev )
+		&& ((BUS_expected_prev !== last_BUS_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port BUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", BUS_expected_prev);
+		$display ("     Real value = %b", BUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_BUS_exp = BUS_expected_prev;
+	end
+	if (
+		( CDES_expected_prev !== 1'bx ) && ( CDES_prev !== CDES_expected_prev )
+		&& ((CDES_expected_prev !== last_CDES_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CDES_expected_prev);
+		$display ("     Real value = %b", CDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_CDES_exp = CDES_expected_prev;
+	end
+	if (
+		( CDM_expected_prev !== 1'bx ) && ( CDM_prev !== CDM_expected_prev )
+		&& ((CDM_expected_prev !== last_CDM_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CDM_expected_prev);
+		$display ("     Real value = %b", CDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_CDM_exp = CDM_expected_prev;
+	end
+	if (
+		( CDS_expected_prev !== 1'bx ) && ( CDS_prev !== CDS_expected_prev )
+		&& ((CDS_expected_prev !== last_CDS_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CDS_expected_prev);
+		$display ("     Real value = %b", CDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_CDS_exp = CDS_expected_prev;
+	end
+	if (
+		( CUM_expected_prev !== 1'bx ) && ( CUM_prev !== CUM_expected_prev )
+		&& ((CUM_expected_prev !== last_CUM_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CUM_expected_prev);
+		$display ("     Real value = %b", CUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_CUM_exp = CUM_expected_prev;
+	end
+	if (
+		( CUS_expected_prev !== 1'bx ) && ( CUS_prev !== CUS_expected_prev )
+		&& ((CUS_expected_prev !== last_CUS_exp) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CUS_expected_prev);
+		$display ("     Real value = %b", CUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_CUS_exp = CUS_expected_prev;
+	end
+	if (
+		( DDES_expected_prev !== 1'bx ) && ( DDES_prev !== DDES_expected_prev )
+		&& ((DDES_expected_prev !== last_DDES_exp) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DDES_expected_prev);
+		$display ("     Real value = %b", DDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_DDES_exp = DDES_expected_prev;
+	end
+	if (
+		( DDM_expected_prev !== 1'bx ) && ( DDM_prev !== DDM_expected_prev )
+		&& ((DDM_expected_prev !== last_DDM_exp) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DDM_expected_prev);
+		$display ("     Real value = %b", DDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_DDM_exp = DDM_expected_prev;
+	end
+	if (
+		( DDS_expected_prev !== 1'bx ) && ( DDS_prev !== DDS_expected_prev )
+		&& ((DDS_expected_prev !== last_DDS_exp) ||
+			on_first_change[18])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DDS_expected_prev);
+		$display ("     Real value = %b", DDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[18] = 1'b0;
+		last_DDS_exp = DDS_expected_prev;
+	end
+	if (
+		( DUM_expected_prev !== 1'bx ) && ( DUM_prev !== DUM_expected_prev )
+		&& ((DUM_expected_prev !== last_DUM_exp) ||
+			on_first_change[19])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DUM_expected_prev);
+		$display ("     Real value = %b", DUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[19] = 1'b0;
+		last_DUM_exp = DUM_expected_prev;
+	end
+	if (
+		( DUS_expected_prev !== 1'bx ) && ( DUS_prev !== DUS_expected_prev )
+		&& ((DUS_expected_prev !== last_DUS_exp) ||
+			on_first_change[20])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port DUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DUS_expected_prev);
+		$display ("     Real value = %b", DUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[20] = 1'b0;
+		last_DUS_exp = DUS_expected_prev;
+	end
+	if (
+		( EDES_expected_prev !== 1'bx ) && ( EDES_prev !== EDES_expected_prev )
+		&& ((EDES_expected_prev !== last_EDES_exp) ||
+			on_first_change[21])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EDES_expected_prev);
+		$display ("     Real value = %b", EDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[21] = 1'b0;
+		last_EDES_exp = EDES_expected_prev;
+	end
+	if (
+		( EDM_expected_prev !== 1'bx ) && ( EDM_prev !== EDM_expected_prev )
+		&& ((EDM_expected_prev !== last_EDM_exp) ||
+			on_first_change[22])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EDM_expected_prev);
+		$display ("     Real value = %b", EDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[22] = 1'b0;
+		last_EDM_exp = EDM_expected_prev;
+	end
+	if (
+		( EDS_expected_prev !== 1'bx ) && ( EDS_prev !== EDS_expected_prev )
+		&& ((EDS_expected_prev !== last_EDS_exp) ||
+			on_first_change[23])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EDS_expected_prev);
+		$display ("     Real value = %b", EDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[23] = 1'b0;
+		last_EDS_exp = EDS_expected_prev;
+	end
+	if (
+		( EUM_expected_prev !== 1'bx ) && ( EUM_prev !== EUM_expected_prev )
+		&& ((EUM_expected_prev !== last_EUM_exp) ||
+			on_first_change[24])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EUM_expected_prev);
+		$display ("     Real value = %b", EUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[24] = 1'b0;
+		last_EUM_exp = EUM_expected_prev;
+	end
+	if (
+		( EUS_expected_prev !== 1'bx ) && ( EUS_prev !== EUS_expected_prev )
+		&& ((EUS_expected_prev !== last_EUS_exp) ||
+			on_first_change[25])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EUS_expected_prev);
+		$display ("     Real value = %b", EUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[25] = 1'b0;
+		last_EUS_exp = EUS_expected_prev;
+	end
+	if (
+		( FDES_expected_prev !== 1'bx ) && ( FDES_prev !== FDES_expected_prev )
+		&& ((FDES_expected_prev !== last_FDES_exp) ||
+			on_first_change[26])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FDES_expected_prev);
+		$display ("     Real value = %b", FDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[26] = 1'b0;
+		last_FDES_exp = FDES_expected_prev;
+	end
+	if (
+		( FDM_expected_prev !== 1'bx ) && ( FDM_prev !== FDM_expected_prev )
+		&& ((FDM_expected_prev !== last_FDM_exp) ||
+			on_first_change[27])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FDM_expected_prev);
+		$display ("     Real value = %b", FDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[27] = 1'b0;
+		last_FDM_exp = FDM_expected_prev;
+	end
+	if (
+		( FDS_expected_prev !== 1'bx ) && ( FDS_prev !== FDS_expected_prev )
+		&& ((FDS_expected_prev !== last_FDS_exp) ||
+			on_first_change[28])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FDS_expected_prev);
+		$display ("     Real value = %b", FDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[28] = 1'b0;
+		last_FDS_exp = FDS_expected_prev;
+	end
+	if (
+		( FUM_expected_prev !== 1'bx ) && ( FUM_prev !== FUM_expected_prev )
+		&& ((FUM_expected_prev !== last_FUM_exp) ||
+			on_first_change[29])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FUM_expected_prev);
+		$display ("     Real value = %b", FUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[29] = 1'b0;
+		last_FUM_exp = FUM_expected_prev;
+	end
+	if (
+		( FUS_expected_prev !== 1'bx ) && ( FUS_prev !== FUS_expected_prev )
+		&& ((FUS_expected_prev !== last_FUS_exp) ||
+			on_first_change[30])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FUS_expected_prev);
+		$display ("     Real value = %b", FUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[30] = 1'b0;
+		last_FUS_exp = FUS_expected_prev;
+	end
+	if (
+		( GDES_expected_prev !== 1'bx ) && ( GDES_prev !== GDES_expected_prev )
+		&& ((GDES_expected_prev !== last_GDES_exp) ||
+			on_first_change[31])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GDES :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GDES_expected_prev);
+		$display ("     Real value = %b", GDES_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[31] = 1'b0;
+		last_GDES_exp = GDES_expected_prev;
+	end
+	if (
+		( GDM_expected_prev !== 1'bx ) && ( GDM_prev !== GDM_expected_prev )
+		&& ((GDM_expected_prev !== last_GDM_exp) ||
+			on_first_change[32])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GDM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GDM_expected_prev);
+		$display ("     Real value = %b", GDM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[32] = 1'b0;
+		last_GDM_exp = GDM_expected_prev;
+	end
+	if (
+		( GDS_expected_prev !== 1'bx ) && ( GDS_prev !== GDS_expected_prev )
+		&& ((GDS_expected_prev !== last_GDS_exp) ||
+			on_first_change[33])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GDS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GDS_expected_prev);
+		$display ("     Real value = %b", GDS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[33] = 1'b0;
+		last_GDS_exp = GDS_expected_prev;
+	end
+	if (
+		( GUM_expected_prev !== 1'bx ) && ( GUM_prev !== GUM_expected_prev )
+		&& ((GUM_expected_prev !== last_GUM_exp) ||
+			on_first_change[34])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GUM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GUM_expected_prev);
+		$display ("     Real value = %b", GUM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[34] = 1'b0;
+		last_GUM_exp = GUM_expected_prev;
+	end
+	if (
+		( GUS_expected_prev !== 1'bx ) && ( GUS_prev !== GUS_expected_prev )
+		&& ((GUS_expected_prev !== last_GUS_exp) ||
+			on_first_change[35])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GUS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GUS_expected_prev);
+		$display ("     Real value = %b", GUS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[35] = 1'b0;
+		last_GUS_exp = GUS_expected_prev;
+	end
+	if (
+		( OUT_expected_prev !== 1'bx ) && ( OUT_prev !== OUT_expected_prev )
+		&& ((OUT_expected_prev !== last_OUT_exp) ||
+			on_first_change[36])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUT_expected_prev);
+		$display ("     Real value = %b", OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[36] = 1'b0;
+		last_OUT_exp = OUT_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module contador_3_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLOCK;
+reg RST;
+// wires                                               
+wire ADES;
+wire ADM;
+wire ADS;
+wire AUM;
+wire AUS;
+wire BDES;
+wire BDM;
+wire BDS;
+wire BUM;
+wire BUS;
+wire CDES;
+wire CDM;
+wire CDS;
+wire CUM;
+wire CUS;
+wire DDES;
+wire DDM;
+wire DDS;
+wire DUM;
+wire DUS;
+wire EDES;
+wire EDM;
+wire EDS;
+wire EUM;
+wire EUS;
+wire FDES;
+wire FDM;
+wire FDS;
+wire FUM;
+wire FUS;
+wire GDES;
+wire GDM;
+wire GDS;
+wire GUM;
+wire GUS;
+wire OUT;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+contador_3 i1 (
+// port map - connection between master ports and signals/registers   
+	.ADES(ADES),
+	.ADM(ADM),
+	.ADS(ADS),
+	.AUM(AUM),
+	.AUS(AUS),
+	.BDES(BDES),
+	.BDM(BDM),
+	.BDS(BDS),
+	.BUM(BUM),
+	.BUS(BUS),
+	.CDES(CDES),
+	.CDM(CDM),
+	.CDS(CDS),
+	.CLOCK(CLOCK),
+	.CUM(CUM),
+	.CUS(CUS),
+	.DDES(DDES),
+	.DDM(DDM),
+	.DDS(DDS),
+	.DUM(DUM),
+	.DUS(DUS),
+	.EDES(EDES),
+	.EDM(EDM),
+	.EDS(EDS),
+	.EUM(EUM),
+	.EUS(EUS),
+	.FDES(FDES),
+	.FDM(FDM),
+	.FDS(FDS),
+	.FUM(FUM),
+	.FUS(FUS),
+	.GDES(GDES),
+	.GDM(GDM),
+	.GDS(GDS),
+	.GUM(GUM),
+	.GUS(GUS),
+	.OUT(OUT),
+	.RST(RST)
+);
+
+// CLOCK
+initial
+begin
+	repeat(27)
+	begin
+		CLOCK = 1'b0;
+		CLOCK = #18519 1'b1;
+		# 18518;
+	end
+	CLOCK = 1'b0;
+end 
+
+// RST
+initial
+begin
+	RST = 1'b0;
+end 
+
+contador_3_vlg_sample_tst tb_sample (
+	.CLOCK(CLOCK),
+	.RST(RST),
+	.sampler_tx(sampler)
+);
+
+contador_3_vlg_check_tst tb_out(
+	.ADES(ADES),
+	.ADM(ADM),
+	.ADS(ADS),
+	.AUM(AUM),
+	.AUS(AUS),
+	.BDES(BDES),
+	.BDM(BDM),
+	.BDS(BDS),
+	.BUM(BUM),
+	.BUS(BUS),
+	.CDES(CDES),
+	.CDM(CDM),
+	.CDS(CDS),
+	.CUM(CUM),
+	.CUS(CUS),
+	.DDES(DDES),
+	.DDM(DDM),
+	.DDS(DDS),
+	.DUM(DUM),
+	.DUS(DUS),
+	.EDES(EDES),
+	.EDM(EDM),
+	.EDS(EDS),
+	.EUM(EUM),
+	.EUS(EUS),
+	.FDES(FDES),
+	.FDM(FDM),
+	.FDS(FDS),
+	.FUM(FUM),
+	.FUS(FUS),
+	.GDES(GDES),
+	.GDM(GDM),
+	.GDS(GDS),
+	.GUM(GUM),
+	.GUS(GUS),
+	.OUT(OUT),
+	.sampler_rx(sampler)
+);
+endmodule
+
