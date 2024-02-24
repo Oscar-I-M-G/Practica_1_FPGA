@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Proyecto\Practica_Tarea_1\simulation\qsim
+vtemporizador_decimas_de_segundo
+Z1 IZ2a[K8zm]GVPMiS3eKbM10
+Z2 V^GLD:8DeE4DFLozT`?Uic3
+Z3 dF:\Proyecto\Practica_Tarea_1\simulation\qsim
+Z4 w1708776868
+Z5 8temporizador_decimas_de_segundo.vo
+Z6 Ftemporizador_decimas_de_segundo.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 eCeBjd;LL83N6b[N7VYo21
+!s85 0
+Z10 !s108 1708776883.004000
+Z11 !s107 temporizador_decimas_de_segundo.vo|
+Z12 !s90 -work|work|temporizador_decimas_de_segundo.vo|
+!s101 -O0
+vtemporizador_decimas_de_segundo_vlg_check_tst
+!i10b 1
+!s100 C4aJ;8A?^E>BF4ImmoUU=1
+IlIjMU`EgKO<P7G94z]WeZ0
+Vc7l8hdD@;I84FJQAThT6Q1
+R3
+Z13 w1708776858
+Z14 8temporizador_decimas_de_segundo.vt
+Z15 Ftemporizador_decimas_de_segundo.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1708776888.426000
+Z17 !s107 temporizador_decimas_de_segundo.vt|
+Z18 !s90 -work|work|temporizador_decimas_de_segundo.vt|
+!s101 -O0
+R8
+vtemporizador_decimas_de_segundo_vlg_sample_tst
+!i10b 1
+!s100 RZaP>HYhNQBHCM<LPfS2Q1
+I]QICKhk];h17955SJ_;M81
+V=S[`iIgC?]2JTzQlZQon63
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vtemporizador_decimas_de_segundo_vlg_vec_tst
+!i10b 1
+!s100 oEM??^WhNJ?]GFf`JG<]V2
+I@>=_7CFCUo;YmJPGWHf^_0
+VX^P?^56=_QgYWRE;:mQdb3
+R3
+R13
+R14
+R15
+L0 154
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
