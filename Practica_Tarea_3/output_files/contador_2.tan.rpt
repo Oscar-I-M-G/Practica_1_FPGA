@@ -1,0 +1,561 @@
+Classic Timing Analyzer report for contador_2
+Thu Feb 29 14:21:13 2024
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK'
+  7. Clock Hold: 'CLOCK'
+  8. tco
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------+---------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                       ; To                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------+---------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 15.859 ns                        ; 74160:inst1|6                              ; FUS                             ; CLOCK      ; --       ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A                                      ; None          ; 331.02 MHz ( period = 3.021 ns ) ; temporizador:inst|74161:inst|f74161:sub|99 ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; 0            ;
+; Clock Hold: 'CLOCK'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; 74160:inst1|9                              ; 74160:inst1|9                   ; CLOCK      ; CLOCK    ; 24           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                            ;                                 ;            ;          ; 24           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------+---------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK'                                                                                                                                                                                                                                                                       ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                         ; To                              ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 331.02 MHz ( period = 3.021 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.808 ns                ;
+; N/A                                     ; 334.22 MHz ( period = 2.992 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.779 ns                ;
+; N/A                                     ; 347.46 MHz ( period = 2.878 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 348.92 MHz ( period = 2.866 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.652 ns                ;
+; N/A                                     ; 349.53 MHz ( period = 2.861 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 349.77 MHz ( period = 2.859 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.645 ns                ;
+; N/A                                     ; 349.77 MHz ( period = 2.859 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.645 ns                ;
+; N/A                                     ; 349.77 MHz ( period = 2.859 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.645 ns                ;
+; N/A                                     ; 349.90 MHz ( period = 2.858 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.642 ns                ;
+; N/A                                     ; 350.14 MHz ( period = 2.856 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.642 ns                ;
+; N/A                                     ; 350.26 MHz ( period = 2.855 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.641 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.637 ns                ;
+; N/A                                     ; 352.11 MHz ( period = 2.840 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.627 ns                ;
+; N/A                                     ; 352.49 MHz ( period = 2.837 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.623 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.48 MHz ( period = 2.829 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.613 ns                ;
+; N/A                                     ; 353.73 MHz ( period = 2.827 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.613 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.612 ns                ;
+; N/A                                     ; 361.79 MHz ( period = 2.764 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.552 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.550 ns                ;
+; N/A                                     ; 367.24 MHz ( period = 2.723 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.509 ns                ;
+; N/A                                     ; 368.19 MHz ( period = 2.716 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.502 ns                ;
+; N/A                                     ; 368.19 MHz ( period = 2.716 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.502 ns                ;
+; N/A                                     ; 368.19 MHz ( period = 2.716 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.502 ns                ;
+; N/A                                     ; 368.32 MHz ( period = 2.715 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.499 ns                ;
+; N/A                                     ; 368.32 MHz ( period = 2.715 ns )                    ; 74160:inst2|9                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.672 ns                ;
+; N/A                                     ; 368.46 MHz ( period = 2.714 ns )                    ; 74160:inst2|9                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.671 ns                ;
+; N/A                                     ; 368.60 MHz ( period = 2.713 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.499 ns                ;
+; N/A                                     ; 368.73 MHz ( period = 2.712 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.498 ns                ;
+; N/A                                     ; 369.00 MHz ( period = 2.710 ns )                    ; 74160:inst2|9                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.667 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.492 ns                ;
+; N/A                                     ; 370.37 MHz ( period = 2.700 ns )                    ; 74160:inst2|6                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.657 ns                ;
+; N/A                                     ; 370.51 MHz ( period = 2.699 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.485 ns                ;
+; N/A                                     ; 370.51 MHz ( period = 2.699 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.485 ns                ;
+; N/A                                     ; 370.51 MHz ( period = 2.699 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.485 ns                ;
+; N/A                                     ; 370.51 MHz ( period = 2.699 ns )                    ; 74160:inst2|6                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.656 ns                ;
+; N/A                                     ; 370.64 MHz ( period = 2.698 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.482 ns                ;
+; N/A                                     ; 370.92 MHz ( period = 2.696 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.482 ns                ;
+; N/A                                     ; 371.06 MHz ( period = 2.695 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.481 ns                ;
+; N/A                                     ; 371.06 MHz ( period = 2.695 ns )                    ; 74160:inst2|6                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.652 ns                ;
+; N/A                                     ; 371.20 MHz ( period = 2.694 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.481 ns                ;
+; N/A                                     ; 372.16 MHz ( period = 2.687 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.474 ns                ;
+; N/A                                     ; 372.16 MHz ( period = 2.687 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.474 ns                ;
+; N/A                                     ; 372.16 MHz ( period = 2.687 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.474 ns                ;
+; N/A                                     ; 372.30 MHz ( period = 2.686 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.471 ns                ;
+; N/A                                     ; 372.44 MHz ( period = 2.685 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.471 ns                ;
+; N/A                                     ; 372.58 MHz ( period = 2.684 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.471 ns                ;
+; N/A                                     ; 372.58 MHz ( period = 2.684 ns )                    ; 74160:inst6|9                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.641 ns                ;
+; N/A                                     ; 372.72 MHz ( period = 2.683 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.470 ns                ;
+; N/A                                     ; 372.72 MHz ( period = 2.683 ns )                    ; 74160:inst6|9                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.640 ns                ;
+; N/A                                     ; 373.27 MHz ( period = 2.679 ns )                    ; 74160:inst6|9                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.636 ns                ;
+; N/A                                     ; 373.41 MHz ( period = 2.678 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.464 ns                ;
+; N/A                                     ; 373.41 MHz ( period = 2.678 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.464 ns                ;
+; N/A                                     ; 373.41 MHz ( period = 2.678 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.464 ns                ;
+; N/A                                     ; 373.55 MHz ( period = 2.677 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.461 ns                ;
+; N/A                                     ; 373.83 MHz ( period = 2.675 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.461 ns                ;
+; N/A                                     ; 373.97 MHz ( period = 2.674 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.460 ns                ;
+; N/A                                     ; 379.79 MHz ( period = 2.633 ns )                    ; 74160:inst2|7                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.590 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; 74160:inst2|7                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.589 ns                ;
+; N/A                                     ; 380.23 MHz ( period = 2.630 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 380.52 MHz ( period = 2.628 ns )                    ; 74160:inst2|7                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.585 ns                ;
+; N/A                                     ; 383.29 MHz ( period = 2.609 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.396 ns                ;
+; N/A                                     ; 383.44 MHz ( period = 2.608 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.394 ns                ;
+; N/A                                     ; 384.17 MHz ( period = 2.603 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.391 ns                ;
+; N/A                                     ; 384.32 MHz ( period = 2.602 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.389 ns                ;
+; N/A                                     ; 384.32 MHz ( period = 2.602 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.389 ns                ;
+; N/A                                     ; 384.32 MHz ( period = 2.602 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.389 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.386 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.62 MHz ( period = 2.600 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.384 ns                ;
+; N/A                                     ; 384.76 MHz ( period = 2.599 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.386 ns                ;
+; N/A                                     ; 384.91 MHz ( period = 2.598 ns )                    ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.385 ns                ;
+; N/A                                     ; 384.91 MHz ( period = 2.598 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.384 ns                ;
+; N/A                                     ; 385.06 MHz ( period = 2.597 ns )                    ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.383 ns                ;
+; N/A                                     ; 385.36 MHz ( period = 2.595 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst2|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.380 ns                ;
+; N/A                                     ; 385.51 MHz ( period = 2.594 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst2|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.379 ns                ;
+; N/A                                     ; 386.10 MHz ( period = 2.590 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst2|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.375 ns                ;
+; N/A                                     ; 389.71 MHz ( period = 2.566 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst2|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.351 ns                ;
+; N/A                                     ; 389.86 MHz ( period = 2.565 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst2|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.350 ns                ;
+; N/A                                     ; 390.47 MHz ( period = 2.561 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst2|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.346 ns                ;
+; N/A                                     ; 398.25 MHz ( period = 2.511 ns )                    ; 74160:inst2|9                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.468 ns                ;
+; N/A                                     ; 398.41 MHz ( period = 2.510 ns )                    ; 74160:inst2|9                                ; 74160:inst6|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.467 ns                ;
+; N/A                                     ; 398.57 MHz ( period = 2.509 ns )                    ; 74160:inst2|9                                ; 74160:inst6|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.466 ns                ;
+; N/A                                     ; 398.57 MHz ( period = 2.509 ns )                    ; 74160:inst2|9                                ; 74160:inst6|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.466 ns                ;
+; N/A                                     ; 398.88 MHz ( period = 2.507 ns )                    ; 74160:inst2|9                                ; 74160:inst7|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.464 ns                ;
+; N/A                                     ; 400.64 MHz ( period = 2.496 ns )                    ; 74160:inst2|6                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.453 ns                ;
+; N/A                                     ; 400.80 MHz ( period = 2.495 ns )                    ; 74160:inst2|6                                ; 74160:inst6|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.452 ns                ;
+; N/A                                     ; 400.96 MHz ( period = 2.494 ns )                    ; 74160:inst2|6                                ; 74160:inst6|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.451 ns                ;
+; N/A                                     ; 400.96 MHz ( period = 2.494 ns )                    ; 74160:inst2|6                                ; 74160:inst6|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.451 ns                ;
+; N/A                                     ; 401.28 MHz ( period = 2.492 ns )                    ; 74160:inst2|6                                ; 74160:inst7|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.449 ns                ;
+; N/A                                     ; 404.04 MHz ( period = 2.475 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.262 ns                ;
+; N/A                                     ; 405.02 MHz ( period = 2.469 ns )                    ; 74160:inst6|7                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.426 ns                ;
+; N/A                                     ; 405.19 MHz ( period = 2.468 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.255 ns                ;
+; N/A                                     ; 405.19 MHz ( period = 2.468 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.255 ns                ;
+; N/A                                     ; 405.19 MHz ( period = 2.468 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.255 ns                ;
+; N/A                                     ; 405.35 MHz ( period = 2.467 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.252 ns                ;
+; N/A                                     ; 405.68 MHz ( period = 2.465 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.252 ns                ;
+; N/A                                     ; 405.84 MHz ( period = 2.464 ns )                    ; temporizador:inst|74160:inst2|9              ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.251 ns                ;
+; N/A                                     ; 406.67 MHz ( period = 2.459 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.243 ns                ;
+; N/A                                     ; 406.83 MHz ( period = 2.458 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.242 ns                ;
+; N/A                                     ; 407.83 MHz ( period = 2.452 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst2|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.237 ns                ;
+; N/A                                     ; 408.00 MHz ( period = 2.451 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst2|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.236 ns                ;
+; N/A                                     ; 408.33 MHz ( period = 2.449 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.233 ns                ;
+; N/A                                     ; 408.50 MHz ( period = 2.448 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.235 ns                ;
+; N/A                                     ; 408.66 MHz ( period = 2.447 ns )                    ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.236 ns                ;
+; N/A                                     ; 408.66 MHz ( period = 2.447 ns )                    ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst2|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.232 ns                ;
+; N/A                                     ; 409.00 MHz ( period = 2.445 ns )                    ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.229 ns                ;
+; N/A                                     ; 409.67 MHz ( period = 2.441 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.228 ns                ;
+; N/A                                     ; 409.67 MHz ( period = 2.441 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.228 ns                ;
+; N/A                                     ; 409.67 MHz ( period = 2.441 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.228 ns                ;
+; N/A                                     ; 409.84 MHz ( period = 2.440 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst3|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.225 ns                ;
+; N/A                                     ; 410.17 MHz ( period = 2.438 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.225 ns                ;
+; N/A                                     ; 410.34 MHz ( period = 2.437 ns )                    ; temporizador:inst|74160:inst2|6              ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.224 ns                ;
+; N/A                                     ; 410.34 MHz ( period = 2.437 ns )                    ; 74160:inst2|8                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.394 ns                ;
+; N/A                                     ; 410.51 MHz ( period = 2.436 ns )                    ; 74160:inst2|8                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.393 ns                ;
+; N/A                                     ; 411.18 MHz ( period = 2.432 ns )                    ; 74160:inst2|8                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.389 ns                ;
+; N/A                                     ; 411.52 MHz ( period = 2.430 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.214 ns                ;
+; N/A                                     ; 411.69 MHz ( period = 2.429 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.213 ns                ;
+; N/A                                     ; 411.69 MHz ( period = 2.429 ns )                    ; 74160:inst2|7                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.386 ns                ;
+; N/A                                     ; 411.86 MHz ( period = 2.428 ns )                    ; 74160:inst2|7                                ; 74160:inst6|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.385 ns                ;
+; N/A                                     ; 412.03 MHz ( period = 2.427 ns )                    ; 74160:inst2|7                                ; 74160:inst6|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.384 ns                ;
+; N/A                                     ; 412.03 MHz ( period = 2.427 ns )                    ; 74160:inst2|7                                ; 74160:inst6|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.384 ns                ;
+; N/A                                     ; 412.37 MHz ( period = 2.425 ns )                    ; 74160:inst2|7                                ; 74160:inst7|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.382 ns                ;
+; N/A                                     ; 413.22 MHz ( period = 2.420 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.204 ns                ;
+; N/A                                     ; 413.91 MHz ( period = 2.416 ns )                    ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 415.97 MHz ( period = 2.404 ns )                    ; 74160:inst6|6                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.361 ns                ;
+; N/A                                     ; 416.15 MHz ( period = 2.403 ns )                    ; 74160:inst6|6                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.360 ns                ;
+; N/A                                     ; 416.84 MHz ( period = 2.399 ns )                    ; 74160:inst6|6                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.356 ns                ;
+; N/A                                     ; 417.54 MHz ( period = 2.395 ns )                    ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.184 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst2|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.122 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst2|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.121 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst2|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.117 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst1|9                                ; 74160:inst2|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.275 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.100 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst6|8                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.273 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.099 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst1|9                                ; 74160:inst2|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.272 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst1|9                                ; 74160:inst2|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.272 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.090 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|87   ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.086 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.083 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.082 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|6              ; temporizador:inst|74160:inst5|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.084 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.080 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.073 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|6                                ; 74160:inst2|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.245 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst7|6                                ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.245 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.072 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst7|6                                ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.244 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst6|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.131 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.071 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.073 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.073 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.073 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|87  ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|6                                ; 74160:inst2|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.242 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|6                                ; 74160:inst2|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.242 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst6|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.129 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst6|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.128 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst7|6                                ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.240 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.070 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst3|9              ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst2|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.066 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst2|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.065 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.062 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.062 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.061 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst2|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.061 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|99  ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.058 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.052 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|9   ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.048 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst6|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.102 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst6|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst6|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.099 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst5|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.028 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst4|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.021 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst5|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.021 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst4|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.021 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|8                                ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.190 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|8                                ; 74160:inst6|7                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.189 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|8                                ; 74160:inst6|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.188 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|8                                ; 74160:inst6|8                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.188 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst4|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.018 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst4|6              ; temporizador:inst|74160:inst5|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.017 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; 74160:inst2|8                                ; 74160:inst7|6                   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.186 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|99   ; temporizador:inst|74160:inst6|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.987 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst3|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.985 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.986 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst3|7 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.984 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74160:inst6|8              ; temporizador:inst|74160:inst6|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 2.262 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.977 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|110  ; temporizador:inst|74160:inst6|9 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 3.316 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst4|6 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.975 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst1|f74161:sub|110 ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.973 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; temporizador:inst|74161:inst|f74161:sub|9    ; temporizador:inst|74160:inst3|8 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.971 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                              ;                                 ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'CLOCK'                                                                                                                                                                                                       ;
++------------------------------------------+---------------------------------+---------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                            ; To                              ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+---------------------------------+---------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|9                   ; 74160:inst1|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|7                   ; 74160:inst1|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|6                   ; 74160:inst1|6                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|8                   ; 74160:inst1|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst2|7                   ; 74160:inst2|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst2|9                   ; 74160:inst2|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst2|6                   ; 74160:inst2|6                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst2|8                   ; 74160:inst2|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst6|7                   ; 74160:inst6|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst6|9                   ; 74160:inst6|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst6|6                   ; 74160:inst6|6                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst6|8                   ; 74160:inst6|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst7|7                   ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst7|9                   ; 74160:inst7|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst7|6                   ; 74160:inst7|6                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst7|8                   ; 74160:inst7|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.407 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|7                   ; 74160:inst1|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.541 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|9                   ; 74160:inst1|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.577 ns                 ;
+; Not operational: Clock Skew > Data Delay ; temporizador:inst|74160:inst5|9 ; temporizador:inst|74160:inst6|9 ; CLOCK      ; CLOCK    ; None                       ; None                       ; 1.106 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|8                   ; 74160:inst1|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.597 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|6                   ; 74160:inst2|6                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.747 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst7|9                   ; 74160:inst7|7                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.818 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|6                   ; 74160:inst1|9                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.819 ns                 ;
+; Not operational: Clock Skew > Data Delay ; 74160:inst1|6                   ; 74160:inst1|8                   ; CLOCK      ; CLOCK    ; None                       ; None                       ; 0.844 ns                 ;
++------------------------------------------+---------------------------------+---------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; tco                                                                                      ;
++-------+--------------+------------+---------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                            ; To    ; From Clock ;
++-------+--------------+------------+---------------------------------+-------+------------+
+; N/A   ; None         ; 15.859 ns  ; 74160:inst1|6                   ; FUS   ; CLOCK      ;
+; N/A   ; None         ; 15.854 ns  ; 74160:inst1|6                   ; BUS   ; CLOCK      ;
+; N/A   ; None         ; 15.834 ns  ; 74160:inst1|6                   ; CUS   ; CLOCK      ;
+; N/A   ; None         ; 15.803 ns  ; 74160:inst1|6                   ; GUS   ; CLOCK      ;
+; N/A   ; None         ; 15.793 ns  ; 74160:inst1|7                   ; FUS   ; CLOCK      ;
+; N/A   ; None         ; 15.789 ns  ; 74160:inst1|7                   ; BUS   ; CLOCK      ;
+; N/A   ; None         ; 15.769 ns  ; 74160:inst1|7                   ; CUS   ; CLOCK      ;
+; N/A   ; None         ; 15.712 ns  ; 74160:inst1|7                   ; GUS   ; CLOCK      ;
+; N/A   ; None         ; 15.537 ns  ; 74160:inst1|9                   ; FUS   ; CLOCK      ;
+; N/A   ; None         ; 15.532 ns  ; 74160:inst1|9                   ; BUS   ; CLOCK      ;
+; N/A   ; None         ; 15.512 ns  ; 74160:inst1|9                   ; CUS   ; CLOCK      ;
+; N/A   ; None         ; 15.454 ns  ; 74160:inst1|9                   ; GUS   ; CLOCK      ;
+; N/A   ; None         ; 15.263 ns  ; 74160:inst1|8                   ; FUS   ; CLOCK      ;
+; N/A   ; None         ; 15.260 ns  ; 74160:inst1|8                   ; BUS   ; CLOCK      ;
+; N/A   ; None         ; 15.240 ns  ; 74160:inst1|8                   ; CUS   ; CLOCK      ;
+; N/A   ; None         ; 15.217 ns  ; 74160:inst1|8                   ; GUS   ; CLOCK      ;
+; N/A   ; None         ; 15.167 ns  ; 74160:inst1|6                   ; AUS   ; CLOCK      ;
+; N/A   ; None         ; 15.145 ns  ; 74160:inst1|7                   ; EUS   ; CLOCK      ;
+; N/A   ; None         ; 15.101 ns  ; 74160:inst1|7                   ; AUS   ; CLOCK      ;
+; N/A   ; None         ; 15.070 ns  ; 74160:inst1|7                   ; DUS   ; CLOCK      ;
+; N/A   ; None         ; 14.844 ns  ; 74160:inst1|9                   ; AUS   ; CLOCK      ;
+; N/A   ; None         ; 14.705 ns  ; 74160:inst1|6                   ; EUS   ; CLOCK      ;
+; N/A   ; None         ; 14.687 ns  ; 74160:inst1|6                   ; DUS   ; CLOCK      ;
+; N/A   ; None         ; 14.630 ns  ; 74160:inst1|8                   ; EUS   ; CLOCK      ;
+; N/A   ; None         ; 14.581 ns  ; 74160:inst1|8                   ; DUS   ; CLOCK      ;
+; N/A   ; None         ; 14.572 ns  ; 74160:inst1|8                   ; AUS   ; CLOCK      ;
+; N/A   ; None         ; 13.952 ns  ; 74160:inst2|6                   ; BDS   ; CLOCK      ;
+; N/A   ; None         ; 13.936 ns  ; 74160:inst2|6                   ; ADS   ; CLOCK      ;
+; N/A   ; None         ; 13.770 ns  ; 74160:inst7|7                   ; FDM   ; CLOCK      ;
+; N/A   ; None         ; 13.747 ns  ; 74160:inst7|7                   ; GDM   ; CLOCK      ;
+; N/A   ; None         ; 13.707 ns  ; 74160:inst2|6                   ; CDS   ; CLOCK      ;
+; N/A   ; None         ; 13.633 ns  ; 74160:inst2|9                   ; BDS   ; CLOCK      ;
+; N/A   ; None         ; 13.614 ns  ; 74160:inst2|9                   ; ADS   ; CLOCK      ;
+; N/A   ; None         ; 13.600 ns  ; 74160:inst7|7                   ; ADM   ; CLOCK      ;
+; N/A   ; None         ; 13.600 ns  ; 74160:inst6|6                   ; FUM   ; CLOCK      ;
+; N/A   ; None         ; 13.597 ns  ; 74160:inst2|8                   ; BDS   ; CLOCK      ;
+; N/A   ; None         ; 13.586 ns  ; 74160:inst6|6                   ; GUM   ; CLOCK      ;
+; N/A   ; None         ; 13.583 ns  ; 74160:inst2|8                   ; ADS   ; CLOCK      ;
+; N/A   ; None         ; 13.566 ns  ; 74160:inst6|6                   ; CUM   ; CLOCK      ;
+; N/A   ; None         ; 13.565 ns  ; 74160:inst2|6                   ; DDS   ; CLOCK      ;
+; N/A   ; None         ; 13.551 ns  ; 74160:inst6|6                   ; BUM   ; CLOCK      ;
+; N/A   ; None         ; 13.538 ns  ; 74160:inst7|9                   ; FDM   ; CLOCK      ;
+; N/A   ; None         ; 13.518 ns  ; 74160:inst2|6                   ; GDS   ; CLOCK      ;
+; N/A   ; None         ; 13.513 ns  ; 74160:inst7|9                   ; GDM   ; CLOCK      ;
+; N/A   ; None         ; 13.479 ns  ; 74160:inst6|6                   ; EUM   ; CLOCK      ;
+; N/A   ; None         ; 13.473 ns  ; 74160:inst7|7                   ; CDM   ; CLOCK      ;
+; N/A   ; None         ; 13.460 ns  ; 74160:inst7|8                   ; ADM   ; CLOCK      ;
+; N/A   ; None         ; 13.459 ns  ; 74160:inst2|8                   ; EDS   ; CLOCK      ;
+; N/A   ; None         ; 13.458 ns  ; 74160:inst2|6                   ; FDS   ; CLOCK      ;
+; N/A   ; None         ; 13.445 ns  ; 74160:inst7|9                   ; ADM   ; CLOCK      ;
+; N/A   ; None         ; 13.414 ns  ; 74160:inst7|7                   ; BDM   ; CLOCK      ;
+; N/A   ; None         ; 13.412 ns  ; 74160:inst2|9                   ; CDS   ; CLOCK      ;
+; N/A   ; None         ; 13.397 ns  ; 74160:inst7|6                   ; GDM   ; CLOCK      ;
+; N/A   ; None         ; 13.396 ns  ; 74160:inst7|6                   ; FDM   ; CLOCK      ;
+; N/A   ; None         ; 13.380 ns  ; 74160:inst2|8                   ; DDS   ; CLOCK      ;
+; N/A   ; None         ; 13.377 ns  ; 74160:inst2|8                   ; CDS   ; CLOCK      ;
+; N/A   ; None         ; 13.357 ns  ; 74160:inst2|7                   ; BDS   ; CLOCK      ;
+; N/A   ; None         ; 13.354 ns  ; 74160:inst6|8                   ; FUM   ; CLOCK      ;
+; N/A   ; None         ; 13.342 ns  ; 74160:inst6|8                   ; GUM   ; CLOCK      ;
+; N/A   ; None         ; 13.333 ns  ; 74160:inst2|7                   ; ADS   ; CLOCK      ;
+; N/A   ; None         ; 13.327 ns  ; 74160:inst7|8                   ; CDM   ; CLOCK      ;
+; N/A   ; None         ; 13.325 ns  ; 74160:inst7|8                   ; DDM   ; CLOCK      ;
+; N/A   ; None         ; 13.324 ns  ; 74160:inst6|8                   ; CUM   ; CLOCK      ;
+; N/A   ; None         ; 13.321 ns  ; 74160:inst6|6                   ; DUM   ; CLOCK      ;
+; N/A   ; None         ; 13.319 ns  ; 74160:inst7|8                   ; EDM   ; CLOCK      ;
+; N/A   ; None         ; 13.317 ns  ; 74160:inst7|9                   ; CDM   ; CLOCK      ;
+; N/A   ; None         ; 13.306 ns  ; 74160:inst6|8                   ; BUM   ; CLOCK      ;
+; N/A   ; None         ; 13.295 ns  ; 74160:inst6|6                   ; AUM   ; CLOCK      ;
+; N/A   ; None         ; 13.281 ns  ; 74160:inst6|8                   ; EUM   ; CLOCK      ;
+; N/A   ; None         ; 13.267 ns  ; 74160:inst7|8                   ; BDM   ; CLOCK      ;
+; N/A   ; None         ; 13.261 ns  ; 74160:inst7|8                   ; GDM   ; CLOCK      ;
+; N/A   ; None         ; 13.259 ns  ; 74160:inst7|8                   ; FDM   ; CLOCK      ;
+; N/A   ; None         ; 13.257 ns  ; 74160:inst7|7                   ; DDM   ; CLOCK      ;
+; N/A   ; None         ; 13.257 ns  ; 74160:inst7|9                   ; BDM   ; CLOCK      ;
+; N/A   ; None         ; 13.256 ns  ; 74160:inst2|7                   ; DDS   ; CLOCK      ;
+; N/A   ; None         ; 13.252 ns  ; 74160:inst7|7                   ; EDM   ; CLOCK      ;
+; N/A   ; None         ; 13.188 ns  ; 74160:inst7|6                   ; DDM   ; CLOCK      ;
+; N/A   ; None         ; 13.173 ns  ; 74160:inst2|9                   ; GDS   ; CLOCK      ;
+; N/A   ; None         ; 13.161 ns  ; 74160:inst2|8                   ; GDS   ; CLOCK      ;
+; N/A   ; None         ; 13.159 ns  ; 74160:inst6|7                   ; EUM   ; CLOCK      ;
+; N/A   ; None         ; 13.153 ns  ; 74160:inst7|6                   ; EDM   ; CLOCK      ;
+; N/A   ; None         ; 13.140 ns  ; 74160:inst2|9                   ; FDS   ; CLOCK      ;
+; N/A   ; None         ; 13.139 ns  ; 74160:inst2|7                   ; CDS   ; CLOCK      ;
+; N/A   ; None         ; 13.128 ns  ; 74160:inst6|8                   ; DUM   ; CLOCK      ;
+; N/A   ; None         ; 13.122 ns  ; 74160:inst7|6                   ; ADM   ; CLOCK      ;
+; N/A   ; None         ; 13.101 ns  ; 74160:inst2|8                   ; FDS   ; CLOCK      ;
+; N/A   ; None         ; 13.097 ns  ; 74160:inst6|9                   ; FUM   ; CLOCK      ;
+; N/A   ; None         ; 13.089 ns  ; 74160:inst6|9                   ; CUM   ; CLOCK      ;
+; N/A   ; None         ; 13.084 ns  ; 74160:inst6|9                   ; GUM   ; CLOCK      ;
+; N/A   ; None         ; 13.066 ns  ; 74160:inst2|6                   ; EDS   ; CLOCK      ;
+; N/A   ; None         ; 13.057 ns  ; 74160:inst6|8                   ; AUM   ; CLOCK      ;
+; N/A   ; None         ; 13.047 ns  ; 74160:inst6|9                   ; BUM   ; CLOCK      ;
+; N/A   ; None         ; 13.011 ns  ; 74160:inst6|7                   ; FUM   ; CLOCK      ;
+; N/A   ; None         ; 13.003 ns  ; 74160:inst6|7                   ; CUM   ; CLOCK      ;
+; N/A   ; None         ; 13.001 ns  ; 74160:inst6|7                   ; DUM   ; CLOCK      ;
+; N/A   ; None         ; 12.998 ns  ; 74160:inst6|7                   ; GUM   ; CLOCK      ;
+; N/A   ; None         ; 12.994 ns  ; 74160:inst7|6                   ; CDM   ; CLOCK      ;
+; N/A   ; None         ; 12.970 ns  ; 74160:inst2|7                   ; EDS   ; CLOCK      ;
+; N/A   ; None         ; 12.956 ns  ; 74160:inst6|7                   ; BUM   ; CLOCK      ;
+; N/A   ; None         ; 12.934 ns  ; 74160:inst7|6                   ; BDM   ; CLOCK      ;
+; N/A   ; None         ; 12.922 ns  ; 74160:inst2|7                   ; GDS   ; CLOCK      ;
+; N/A   ; None         ; 12.863 ns  ; 74160:inst2|7                   ; FDS   ; CLOCK      ;
+; N/A   ; None         ; 12.786 ns  ; 74160:inst6|9                   ; AUM   ; CLOCK      ;
+; N/A   ; None         ; 12.701 ns  ; 74160:inst6|7                   ; AUM   ; CLOCK      ;
+; N/A   ; None         ; 9.585 ns   ; temporizador:inst|74160:inst6|9 ; LED1S ; CLOCK      ;
+; N/A   ; None         ; 9.165 ns   ; temporizador:inst|74160:inst6|7 ; LED1S ; CLOCK      ;
+; N/A   ; None         ; 9.023 ns   ; temporizador:inst|74160:inst6|8 ; LED1S ; CLOCK      ;
+; N/A   ; None         ; 8.890 ns   ; temporizador:inst|74160:inst6|6 ; LED1S ; CLOCK      ;
++-------+--------------+------------+---------------------------------+-------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Feb 29 14:21:10 2024
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off contador_2 -c contador_2 --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "temporizador:inst|inst11~latch" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK" is an undefined clock
+Warning: Found 8 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "temporizador:inst|inst11~latch" as buffer
+    Info: Detected ripple clock "temporizador:inst|74160:inst6|6" as buffer
+    Info: Detected ripple clock "temporizador:inst|74160:inst6|8" as buffer
+    Info: Detected ripple clock "temporizador:inst|74160:inst6|9" as buffer
+    Info: Detected ripple clock "temporizador:inst|74160:inst6|7" as buffer
+    Info: Detected gated clock "temporizador:inst|inst8~0" as buffer
+    Info: Detected gated clock "temporizador:inst|inst7~0" as buffer
+    Info: Detected gated clock "temporizador:inst|inst11~head_lut" as buffer
+Info: Clock "CLOCK" has Internal fmax of 331.02 MHz between source register "temporizador:inst|74161:inst|f74161:sub|99" and destination register "temporizador:inst|74160:inst5|8" (period= 3.021 ns)
+    Info: + Longest register to register delay is 2.808 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X55_Y3_N13; Fanout = 3; REG Node = 'temporizador:inst|74161:inst|f74161:sub|99'
+        Info: 2: + IC(0.332 ns) + CELL(0.410 ns) = 0.742 ns; Loc. = LCCOMB_X55_Y3_N8; Fanout = 5; COMB Node = 'temporizador:inst|74161:inst|f74161:sub|104'
+        Info: 3: + IC(0.288 ns) + CELL(0.275 ns) = 1.305 ns; Loc. = LCCOMB_X55_Y3_N6; Fanout = 6; COMB Node = 'temporizador:inst|74160:inst2|45'
+        Info: 4: + IC(0.268 ns) + CELL(0.150 ns) = 1.723 ns; Loc. = LCCOMB_X55_Y3_N28; Fanout = 6; COMB Node = 'temporizador:inst|74160:inst4|45~0'
+        Info: 5: + IC(0.267 ns) + CELL(0.150 ns) = 2.140 ns; Loc. = LCCOMB_X55_Y3_N2; Fanout = 3; COMB Node = 'temporizador:inst|74160:inst5|45~0'
+        Info: 6: + IC(0.434 ns) + CELL(0.150 ns) = 2.724 ns; Loc. = LCCOMB_X56_Y3_N24; Fanout = 1; COMB Node = 'temporizador:inst|74160:inst5|8~0'
+        Info: 7: + IC(0.000 ns) + CELL(0.084 ns) = 2.808 ns; Loc. = LCFF_X56_Y3_N25; Fanout = 2; REG Node = 'temporizador:inst|74160:inst5|8'
+        Info: Total cell delay = 1.219 ns ( 43.41 % )
+        Info: Total interconnect delay = 1.589 ns ( 56.59 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "CLOCK" to destination register is 2.662 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 5; CLK Node = 'CLOCK'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 24; COMB Node = 'CLOCK~clkctrl'
+            Info: 3: + IC(1.033 ns) + CELL(0.537 ns) = 2.662 ns; Loc. = LCFF_X56_Y3_N25; Fanout = 2; REG Node = 'temporizador:inst|74160:inst5|8'
+            Info: Total cell delay = 1.516 ns ( 56.95 % )
+            Info: Total interconnect delay = 1.146 ns ( 43.05 % )
+        Info: - Longest clock path from clock "CLOCK" to source register is 2.661 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 5; CLK Node = 'CLOCK'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 24; COMB Node = 'CLOCK~clkctrl'
+            Info: 3: + IC(1.032 ns) + CELL(0.537 ns) = 2.661 ns; Loc. = LCFF_X55_Y3_N13; Fanout = 3; REG Node = 'temporizador:inst|74161:inst|f74161:sub|99'
+            Info: Total cell delay = 1.516 ns ( 56.97 % )
+            Info: Total interconnect delay = 1.145 ns ( 43.03 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Warning: Circuit may not operate. Detected 24 non-operational path(s) clocked by clock "CLOCK" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "74160:inst1|9" and destination pin or register "74160:inst1|9" for clock "CLOCK" (Hold time is 438 ps)
+    Info: + Largest clock skew is 0.829 ns
+        Info: + Longest clock path from clock "CLOCK" to destination register is 8.708 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 5; CLK Node = 'CLOCK'
+            Info: 2: + IC(2.484 ns) + CELL(0.787 ns) = 4.250 ns; Loc. = LCFF_X55_Y3_N1; Fanout = 4; REG Node = 'temporizador:inst|74160:inst6|9'
+            Info: 3: + IC(0.510 ns) + CELL(0.371 ns) = 5.131 ns; Loc. = LCCOMB_X55_Y4_N4; Fanout = 2; COMB Node = 'temporizador:inst|inst7~0'
+            Info: 4: + IC(0.264 ns) + CELL(0.275 ns) = 5.670 ns; Loc. = LCCOMB_X55_Y4_N24; Fanout = 2; COMB Node = 'temporizador:inst|inst11~head_lut'
+            Info: 5: + IC(1.479 ns) + CELL(0.000 ns) = 7.149 ns; Loc. = CLKCTRL_G15; Fanout = 16; COMB Node = 'temporizador:inst|inst11~head_lutclkctrl'
+            Info: 6: + IC(1.022 ns) + CELL(0.537 ns) = 8.708 ns; Loc. = LCFF_X62_Y5_N1; Fanout = 10; REG Node = '74160:inst1|9'
+            Info: Total cell delay = 2.949 ns ( 33.87 % )
+            Info: Total interconnect delay = 5.759 ns ( 66.13 % )
+        Info: - Shortest clock path from clock "CLOCK" to source register is 7.879 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 5; CLK Node = 'CLOCK'
+            Info: 2: + IC(2.204 ns) + CELL(0.787 ns) = 3.970 ns; Loc. = LCFF_X55_Y4_N13; Fanout = 7; REG Node = 'temporizador:inst|74160:inst6|6'
+            Info: 3: + IC(0.316 ns) + CELL(0.150 ns) = 4.436 ns; Loc. = LCCOMB_X55_Y4_N10; Fanout = 2; COMB Node = 'temporizador:inst|inst8~0'
+            Info: 4: + IC(0.255 ns) + CELL(0.150 ns) = 4.841 ns; Loc. = LCCOMB_X55_Y4_N24; Fanout = 2; COMB Node = 'temporizador:inst|inst11~head_lut'
+            Info: 5: + IC(1.479 ns) + CELL(0.000 ns) = 6.320 ns; Loc. = CLKCTRL_G15; Fanout = 16; COMB Node = 'temporizador:inst|inst11~head_lutclkctrl'
+            Info: 6: + IC(1.022 ns) + CELL(0.537 ns) = 7.879 ns; Loc. = LCFF_X62_Y5_N1; Fanout = 10; REG Node = '74160:inst1|9'
+            Info: Total cell delay = 2.603 ns ( 33.04 % )
+            Info: Total interconnect delay = 5.276 ns ( 66.96 % )
+    Info: - Micro clock to output delay of source is 0.250 ns
+    Info: - Shortest register to register delay is 0.407 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X62_Y5_N1; Fanout = 10; REG Node = '74160:inst1|9'
+        Info: 2: + IC(0.000 ns) + CELL(0.323 ns) = 0.323 ns; Loc. = LCCOMB_X62_Y5_N0; Fanout = 1; COMB Node = '74160:inst1|9~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 0.407 ns; Loc. = LCFF_X62_Y5_N1; Fanout = 10; REG Node = '74160:inst1|9'
+        Info: Total cell delay = 0.407 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+Info: tco from clock "CLOCK" to destination pin "FUS" through register "74160:inst1|6" is 15.859 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 8.708 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 5; CLK Node = 'CLOCK'
+        Info: 2: + IC(2.484 ns) + CELL(0.787 ns) = 4.250 ns; Loc. = LCFF_X55_Y3_N1; Fanout = 4; REG Node = 'temporizador:inst|74160:inst6|9'
+        Info: 3: + IC(0.510 ns) + CELL(0.371 ns) = 5.131 ns; Loc. = LCCOMB_X55_Y4_N4; Fanout = 2; COMB Node = 'temporizador:inst|inst7~0'
+        Info: 4: + IC(0.264 ns) + CELL(0.275 ns) = 5.670 ns; Loc. = LCCOMB_X55_Y4_N24; Fanout = 2; COMB Node = 'temporizador:inst|inst11~head_lut'
+        Info: 5: + IC(1.479 ns) + CELL(0.000 ns) = 7.149 ns; Loc. = CLKCTRL_G15; Fanout = 16; COMB Node = 'temporizador:inst|inst11~head_lutclkctrl'
+        Info: 6: + IC(1.022 ns) + CELL(0.537 ns) = 8.708 ns; Loc. = LCFF_X62_Y5_N15; Fanout = 14; REG Node = '74160:inst1|6'
+        Info: Total cell delay = 2.949 ns ( 33.87 % )
+        Info: Total interconnect delay = 5.759 ns ( 66.13 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 6.901 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X62_Y5_N15; Fanout = 14; REG Node = '74160:inst1|6'
+        Info: 2: + IC(0.826 ns) + CELL(0.275 ns) = 1.101 ns; Loc. = LCCOMB_X62_Y5_N26; Fanout = 1; COMB Node = '7447:inst3|86~0'
+        Info: 3: + IC(3.012 ns) + CELL(2.788 ns) = 6.901 ns; Loc. = PIN_V14; Fanout = 0; PIN Node = 'FUS'
+        Info: Total cell delay = 3.063 ns ( 44.38 % )
+        Info: Total interconnect delay = 3.838 ns ( 55.62 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Thu Feb 29 14:21:16 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:01
+
+
